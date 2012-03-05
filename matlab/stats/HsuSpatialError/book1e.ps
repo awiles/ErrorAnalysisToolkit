@@ -1,0 +1,4839 @@
+%-12345X@PJL JOB
+@PJL SET RESOLUTION = 300
+@PJL ENTER LANGUAGE = POSTSCRIPT 
+
+%!PS-Adobe-3.0
+%%Title: C:\TFILE\Book1e.DVI
+%%Creator: PSCRIPT.DRV Version 4.0
+%%CreationDate: 12/26/98 17:23:48
+%%BoundingBox: 13 13 599 780 
+%%Pages: (atend)
+%%PageOrder: Special
+%%Requirements: 
+%%DocumentNeededFonts: (atend)
+%%DocumentSuppliedFonts: (atend)
+%%DocumentData: Clean7Bit
+%%LanguageLevel: 2
+%%EndComments
+
+%%BeginProlog 
+%%BeginProcSet: Pscript_Win_ErrorHandler 1.0 1
+/currentpacking where{pop/oldpack currentpacking def/setpacking where{pop
+false setpacking}if}if/$brkpage 64 dict def $brkpage begin/prnt{dup type
+/stringtype ne{=string cvs}if dup length 6 mul/tx exch def/ty 10 def
+currentpoint/toy exch def/tox exch def 1 setgray newpath tox toy 2 sub moveto
+0 ty rlineto tx 0 rlineto 0 ty neg rlineto closepath fill tox toy moveto 0
+setgray show}bind def/nl{currentpoint exch pop lmargin exch moveto 0 -10
+rmoveto}def/=={/cp 0 def typeprint nl}def/typeprint{dup type exec}readonly def
+/lmargin 72 def/rmargin 72 def/tprint{dup length cp add rmargin gt{nl/cp 0 def
+}if dup length cp add/cp exch def prnt}readonly def/cvsprint{=string cvs
+tprint( )tprint}readonly def/integertype{cvsprint}readonly def/realtype{
+cvsprint}readonly def/booleantype{cvsprint}readonly def/operatortype{(--)
+tprint =string cvs tprint(-- )tprint}readonly def/marktype{pop(-mark- )tprint}
+readonly def/dicttype{pop(-dictionary- )tprint}readonly def/nulltype{pop
+(-null- )tprint}readonly def/filetype{pop(-filestream- )tprint}readonly def
+/savetype{pop(-savelevel- )tprint}readonly def/fonttype{pop(-fontid- )tprint}
+readonly def/nametype{dup xcheck not{(/)tprint}if cvsprint}readonly def
+/stringtype{dup rcheck{(\()tprint tprint(\))tprint}{pop(-string- )tprint}
+ifelse}readonly def/arraytype{dup rcheck{dup xcheck{({)tprint{typeprint}forall
+(})tprint}{([)tprint{typeprint}forall(])tprint}ifelse}{pop(-array- )tprint}
+ifelse}readonly def/packedarraytype{dup rcheck{dup xcheck{({)tprint{typeprint}
+forall(})tprint}{([)tprint{typeprint}forall(])tprint}ifelse}{pop
+(-packedarray- )tprint}ifelse}readonly def/courier/Courier findfont 10
+scalefont def end errordict/handleerror{systemdict begin $error begin $brkpage
+begin newerror{/newerror false store vmstatus pop pop 0 ne{grestoreall}if
+showpage initgraphics courier setfont lmargin 720 moveto(ERROR: )prnt
+errorname prnt nl(OFFENDING COMMAND: )prnt/command load prnt $error/ostack
+known{nl nl(STACK:)prnt nl nl $error/ostack get aload length{==}repeat}if
+systemdict/showpage get exec(%%[ Error: )print errorname =print
+(; OffendingCommand: )print/command load =print( ]%%)= flush}if end end end}
+dup 0 systemdict put dup 4 $brkpage put bind readonly put/currentpacking where
+{pop/setpacking where{pop oldpack setpacking}if}if
+%%EndProcSet
+userdict /Pscript_Win_Driver_Incr 200 dict dup begin put
+%%BeginResource: file Pscript_FatalError 2.0 0
+/FatalErrorIf{{initgraphics findfont exch scalefont setfont counttomark 3 div
+cvi{moveto show}repeat showpage quit}{cleartomark}ifelse}bind def
+%%EndResource
+/VM? {vmstatus exch sub exch pop gt { [
+(This job requires more memory than is available in this printer.) 100 500
+(Try one or more of the following, and then print again:) 100 485
+(In the PostScript dialog box, click Optimize For Portability.) 115 470
+(In the Device Options dialog box, make sure the Available Printer Memory is accurate.) 115 455
+(Reduce the number of fonts in the document.) 115 440
+(Print the document in parts.) 115 425
+12 /Times-Roman showpage
+(%%[ PrinterError: Low Printer VM ]%%) =
+true FatalErrorIf}if} bind def
+30000  VM?
+%%BeginResource: file Pscript_Win_Utils 2.0 0
+/|/def load def/,/load load |/~/exch , |/?/ifelse , |/!/pop , |/`/begin , |/^
+/index , |/@/dup , |/+/translate , |/$/roll , |/U/userdict , |/M/moveto , |/-
+/rlineto , |/&/currentdict , |/:/gsave , |/;/grestore , |/F/false , |/T/true ,
+|/N/newpath , |/E/end , |/Ac/arc , |/An/arcn , |/A/ashow , |/D/awidthshow , |
+/C/closepath , |/V/div , |/O/eofill , |/L/fill , |/I/lineto , |/-C/rcurveto ,
+|/-M/rmoveto , |/+S/scale , |/Ji/setfont , |/Lc/setlinecap , |/Lj/setlinejoin
+, |/Lw/setlinewidth , |/S/show , |/LH/showpage , |/K/stroke , |/W/widthshow ,
+|/R/rotate , |/b{bind |}bind |/bd{bind |}bind |/xd{~ |}bd/ld{, |}bd/lw/Lw ld
+/lc/Lc ld/lj/Lj ld/sg/setgray ld/L2? F/languagelevel where{! languagelevel 2
+ge{! T}if}if |/g{@ not{U/DefIf_save save put}if U/DefIf_bool 2 ^ put}b
+/DefIf_El{if U/DefIf_bool get not @{U/DefIf_save get restore}if}b/e{DefIf_El !
+}b/self & |/reinitialize{[/TextInit/GraphInit/UtilsInit counttomark{@ where{
+self eq}{F}?{cvx exec}{!}?}repeat cleartomark}b/initialize{`{/ADO_mxRot ~ |
+/TextInitialised? F | reinitialize E}{U/Pscript_Win_Data 200 dict @ ` put
+/ADO_mxRot ~ |/TextInitialised? F | reinitialize}?}b/terminate{!{& self eq{
+exit}{E}?}loop E}b/suspend/terminate , |/resume{` Pscript_Win_Data `}b/snap{
+transform 0.25 sub round 0.25 add ~ 0.25 sub round 0.25 add ~ itransform}b
+/dsnap{dtransform round ~ round ~ idtransform}b<04>cvn{}|/setjn{{statusdict
+/jobname known{statusdict/jobname 3 -1 $ put}if}stopped cleartomark}b/solid{[]
+0 setdash}b/setdsh{0 setdash}b/colspRefresh{}b/rp{4 2 $ M 1 ^ 0 - 0 ~ - neg 0
+-}b/rr{1 ^ 0 - 0 ~ - neg 0 - C}b
+%%EndResource
+%%BeginResource: file Pscript_Win_Utils_L1 2.0 0
+L2? not g{/rf{N rp L}b/fx{1 1 dtransform @ 0 ge{1 sub 1}{1 add -0.25}? 3 -1 $
+@ 0 ge{1 sub 1}{1 add -0.25}? 3 1 $ 4 1 $ idtransform 4 -2 $ idtransform}b/BZ{
+4 -2 $ snap + +S fx rf}b/rs{N rp C K}b/rc{N rp clip N}b/sg{setgray}b/sco{
+setrgbcolor}b/sgco{{sg}{sco}?}b}e
+%%EndResource
+%%BeginResource: file Pscript_Win_Utils_L2 2.0 0
+L2? g{/colspA/DeviceGray |/colspABC/DeviceRGB |/setAorABC{{colspA}{colspABC}?
+setcolorspace}b/rf/rectfill , |/fx{1 1 dtransform @ 0 ge{1 sub 0.5}{1 add -0.5
+}? 3 -1 $ @ 0 ge{1 sub 0.5}{1 add -0.5}? 3 1 $ 4 1 $ idtransform 4 -2 $
+idtransform}b/BZ{4 -2 $ snap + +S fx rf}b/rs/rectstroke , |/rc/rectclip , |/sg
+{@ @ setcolor}b/sco{setcolor}b/colspRefresh{colspABC setcolorspace}b/sgco{{sg
+}{sco}?}b/UtilsInit{F setglobal}b/definecolorrendering{/ColorRendering
+defineresource !}b/findcolorrendering{@/ColorRendering resourcestatus{! !
+/ColorRendering findresource T}{! F}?}b/selectcolorrendering{@/ColorRendering
+resourcestatus{! !/ColorRendering}{!/DefaultColorRendering/ColorRendering}?
+findresource setcolorrendering}b}e
+%%EndResource
+end
+%%EndProlog
+
+%%BeginSetup 
+[ 1.000 0 0 1.000 0 0 ] false Pscript_Win_Driver_Incr dup /initialize get exec
+
+[{0 
+/languagelevel where{pop languagelevel}{1}ifelse 2 ge{1 dict dup/JobTimeout  4 -1 roll put setuserparams}{statusdict/setjobtimeout get exec}ifelse 
+} stopped cleartomark
+[{240 
+/languagelevel where{pop languagelevel}{1}ifelse 2 ge{1 dict dup/WaitTimeout 4 -1 roll put setuserparams}{statusdict/waittimeout 3 -1 roll put}ifelse 
+} stopped cleartomark
+[{
+%%BeginFeature: *Levels of Gray Printer∆s Current Setting
+
+%%EndFeature
+} stopped cleartomark
+[{
+
+      <</ManualFeed false>> setpagedevice
+} stopped cleartomark
+[{
+%%BeginFeature: *InputSlot Multipurpose Tray
+
+    <</DeferredMediaSelection true /MediaPosition 3>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *PageRegion Letter
+
+      <</DeferredMediaSelection true /PageSize [612 792] /ImagingBBox null>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Duplex Off
+
+    <</Duplex false>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+1 setlinecap 1 setlinejoin 
+/mysetup [ 0.240 0 0 -0.240 13.000 780.000 ] | 
+%%EndSetup
+
+userdict begin /savelevel0 save def end
+%%Page: 1 1
+%%BeginPageSetup
+[{
+%%BeginFeature: *Optional Duplex Unit Not Installed
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Optional Envelope Feeder Not Installed
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Optional Lower Cassette Not Installed
+
+%%EndFeature
+} stopped cleartomark
+userdict begin /pagesave save def end mysetup concat colspRefresh : 1.000 1.000 1.000 sco 0 0 2550 3300 rf ; 
+%%EndPageSetup
+
+: 574 425 153 51 rc pagesave restore
+Pscript_Win_Driver_Incr begin
+%%BeginResource: file Pscript_Win_Encoding 2.0 0
+/bullets{{/bullet}repeat}b/ANSIEncoding[/grave/acute/circumflex/tilde/macron
+/breve/dotaccent/dieresis/ring/cedilla/hungarumlaut/ogonek/caron/dotlessi 18
+bullets StandardEncoding 32 95 getinterval aload ! 3 bullets/quotesinglbase
+/florin/quotedblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron
+/guilsinglleft/OE 4 bullets/quoteleft/quoteright/quotedblleft/quotedblright
+/bullet/endash/emdash/tilde/trademark/scaron/guilsinglright/oe 2 bullets
+/Ydieresis/space/exclamdown/cent/sterling/currency/yen/brokenbar/section
+/dieresis/copyright/ordfeminine/guillemotleft/logicalnot/hyphen/registered
+/macron/degree/plusminus/twosuperior/threesuperior/acute/mu/paragraph
+/periodcentered/cedilla/onesuperior/ordmasculine/guillemotright/onequarter
+/onehalf/threequarters/questiondown/Agrave/Aacute/Acircumflex/Atilde/Adieresis
+/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute
+/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls
+/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla/egrave/eacute
+/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis/eth/ntilde/ograve
+/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex
+/udieresis/yacute/thorn/ydieresis]| ANSIEncoding @ 39/quotesingle put 96/grave
+put/ANSIEncodingOld ANSIEncoding 256 array copy | ANSIEncodingOld @[138 153
+154 169 172 174 177 178 179 181 185 188 189 190 208 215 221 222 240 247 253
+254]{/bullet put @}forall 166/bar put 176/ring put
+%%EndResource
+
+%%BeginResource: file Pscript_Win_Text 2.0 0
+/TextInit{TextInitialised? not{/Pscript_Windows_Font & |/TextInitialised? T |
+/fM[1 0 0 -1 0 0]|/mFM matrix |/iMat[1 0 0.212557 neg 1 0 0]|}if}b/xUP null |
+/yUP null |/uW null |/xSP null |/ySP null |/sW null |/copyfont{1 ^ length add
+dict `{1 ^/FID ne{|}{! !}?}forall & E}b/rF{3 copyfont @ `/Encoding
+ANSIEncoding &/CharStrings known{CharStrings/Eth known not{! ANSIEncodingOld}
+if}if | E}b/mF{findfont ~{@/Encoding get @ StandardEncoding eq{! T}{{
+ISOLatin1Encoding}stopped{! F}{eq}?{T}{@ ` T 32 1 127{Encoding 1 ^ get
+StandardEncoding 3 -1 $ get eq and}for E}?}?}{F}?{rF}{3 copyfont}? `
+/OrigFontType ~ |/OrigFontName ~ | & E 2 ^ ~ definefont fM 5 4 -1 $ put fM 4 0
+put fM makefont Pscript_Windows_Font 3 1 $ put}b/xF{scalefont
+Pscript_Windows_Font 3 1 $ put}b/xMF{mFM astore makefont Pscript_Windows_Font
+3 1 $ put}b/xF2/scalefont , |/xMF2{mFM astore makefont}b/sLT{: Lw -M
+currentpoint snap M 0 - 0 Lc K ;}b/sSU{N/uW ~ |/yUP ~ |/xUP ~ |}b/sU{xUP yUP
+uW sLT}b/sST{N/sW ~ |/ySP ~ |/xSP ~ |}b/sT{xSP ySP sW sLT}b/sR{: + R 0 0 M}b
+/sRxy{: matrix astore concat 0 0 M}b/eR/; , |
+%%EndResource
+
+end reinitialize
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 574 425 153 51 rc pagesave restore
+Pscript_Win_Driver_Incr begin
+%%BeginResource: file Pscript_Win_Type3_Hdr 2.0 0
+/GreNewFont{10 dict @ 3 1 $ | @ ` 4 1 $/FontType 3 |/FontMatrix ~ |/FontBBox ~
+|/Encoding 256 array | 0 1 255{Encoding ~/.notdef put}for/CharProcs 257 dict |
+CharProcs/.notdef{}put/Metrics 257 dict | Metrics/.notdef 3 -1 $ put/BuildChar
+{/char ~ |/fontdict ~ |/charname fontdict/Encoding get char get | fontdict
+/Metrics get charname get aload ! setcachedevice fontdict ` Encoding char get
+CharProcs ~ get E exec}| E definefont !}|/AddChar{` Encoding 3 1 $ put
+CharProcs 3 1 $ put Metrics 3 1 $ put E}|
+%%EndResource
+
+end reinitialize
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 574 425 153 51 rc pagesave restore
+%%BeginFont: MSTT31c1eb00
+27000  VM?
+/MSTT31c1eb00 [50.0 0 0 0 0 0] [-50.0 -50.0 50.0 50.0 ] [1 50 div 0 0 1 50 div 0 0] /MSTT31c1eb00 GreNewFont
+%%EndFont
+(F0) cvn
+0.760 
+ (cmr12) cvn /TrueType 
+F 
+(MSTT31c1eb00) cvn
+mF 
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 574 425 153 51 rc 734  VM?
+pagesave restore
+/G37 [35.0 0.0 2.0 0.0 34.0 34.0 ]
+/G37 {
+    32 34 true [1 0 0 -1 -2.0 34.0 ]
+{<~J,fQJ
+GQY`&?j"1K?j"1K5Qee'^]V@S^]V@QJ-3RfJ-3RfJ-3RfJ-3Rf!!C":!!C":
+!!C":!!C":!!C":!!C":!!C":!!C":!!C":!!C":!!C":!!C":!!C":!!C":
+!!C":!!C":!!C":!!C":!!C":!!C":!!C":!!hE^!WW1M~>} imagemask
+ }
+  55 /G37 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 574 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+625 425 M 
+(7)S 
+; : 608 425 153 51 rc 734  VM?
+pagesave restore
+/G5C [26.0 0.0 1.0 -10.0 25.0 22.0 ]
+/G5C {
+    24 32 true [1 0 0 -1 -1.0 22.0 ]
+{<~^];1M
+_#GGU4:V?F%fe9g!$DLH+9R-Z"+WW=^d%q9J-!H9!9!nXi;`lJ!!%$>!-/&>
+49,@D!!#+]!#P\9(]XOI!!!Q1!&+BQ+95dl!:W5Rn3@!3J,j!X!'UA_~>} imagemask
+ }
+  92 /G5C MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 608 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+659 425 M 
+(\\)S 
+; : 634 425 153 51 rc 734  VM?
+pagesave restore
+/G53 [27.0 0.0 1.0 -9.0 25.0 22.0 ]
+/G53 {
+    24 31 true [1 0 0 -1 -1.0 22.0 ]
+{<~rZ?[i
+@Gi2WE";q.%KJU$!$2UM*Y&/[%KI"L!"TP>%h8RM%KI"L!"TP>%LrI[%KIO[
+!'Cbl3"CIX%Un9*56)/n!"Ju/%KHJ=!!!K/!"Ju/%KHJ=!!*&W!!~>} imagemask
+ }
+  83 /G53 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 634 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+685 425 M 
+(S)S 
+; : 662 425 153 51 rc 734  VM?
+pagesave restore
+/G52 [24.0 0.0 1.0 0.0 22.0 22.0 ]
+/G52 {
+    21 22 true [1 0 0 -1 -1.0 22.0 ]
+{<~!W2p&
+#6559J/eU*2uql]!:Xq-E,Yern,R_&!-mu5Gjk]Xn,R_&!-mu5G]3Y%GQ@4m
+!8ngt^^^Hs#6t50qu?~>} imagemask
+ }
+  82 /G52 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 662 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+713 425 M 
+(R)S 
+; : 687 425 153 51 rc 734  VM?
+pagesave restore
+/G4A [24.0 0.0 1.0 -10.0 23.0 22.0 ]
+/G4A {
+    22 32 true [1 0 0 -1 -1.0 22.0 ]
+{<~!Ut=<
+%@dh3*#o/&(]sat"+W?5J2dX]3!4[j"+V?r!#u1C%L`=Nn,OR2!$D7A+92Bq
+!!"tY!$D5k+9170s6q]Bpg=(A^]4eY!"?XC%);iO?iV$'!,rDK^]XQ9~>} imagemask
+ }
+  74 /G4A MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 687 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+738 425 M 
+(J)S 
+; : 711 425 153 51 rc 734  VM?
+pagesave restore
+/G55 [19.0 0.0 1.0 0.0 17.0 22.0 ]
+/G55 {
+    16 22 true [1 0 0 -1 -1.0 22.0 ]
+{<~rZ;&O
+*fgel%gEOE%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=%flY!~>} imagemask
+ }
+  85 /G55 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 711 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+762 425 M 
+(U)S 
+; : 730 425 153 51 rc 734  VM?
+pagesave restore
+/G44 [24.0 0.0 2.0 0.0 24.0 22.0 ]
+/G44 {
+    22 22 true [1 0 0 -1 -2.0 22.0 ]
+{<~#Oh^5
+)uqr.!&+WXGQRqj"+YUuJ1q(U!!@`Os*t?lJ0+lD49L+Y"+Y=mJFEYon,n@5
+",-.KKQmfV4;#XFi:$~>} imagemask
+ }
+  68 /G44 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 730 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+781 425 M 
+(D)S 
+; : 754 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+805 425 M 
+(S)S 
+; : 781 425 153 51 rc 734  VM?
+pagesave restore
+/G4B [27.0 0.0 1.0 0.0 26.0 35.0 ]
+/G4B {
+    25 35 true [1 0 0 -1 -1.0 35.0 ]
+{<~IK0?J
+rVuou*WQ0?%KHJ/%KHJ/%KHJ/%KHJ/%KHJ/%KHJ/%KHJ/%KHJ/%KHJ/%KHJ/
+%Ng3$%Ns[0%R=t5%Y-55%feQh%feQh%KJHg%KJHg%KJHg%KJHg%KJHg%KJHg
+%KJHg%KJHg%KJHg%KJHg%KJHg%KJHg%KJHg%KJHg%KJHgs5X-0~>} imagemask
+ }
+  75 /G4B MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 781 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+832 425 M 
+(K)S 
+; : 809 425 153 51 rc 734  VM?
+pagesave restore
+/G4C [14.0 0.0 1.0 0.0 11.0 33.0 ]
+/G4C {
+    10 33 true [1 0 0 -1 -1.0 33.0 ]
+{<~)ur/&
+4odbH)uos=zz!!)uurW!u>%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=
+%KHt=s1e~>} imagemask
+ }
+  76 /G4C MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 809 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+860 425 M 
+(L)S 
+; : 822 425 153 51 rc 734  VM?
+pagesave restore
+/G46 [22.0 0.0 2.0 0.0 21.0 22.0 ]
+/G46 {
+    19 22 true [1 0 0 -1 -2.0 22.0 ]
+{<~!W2p&
+#6557J/eQ>3!$g>"2K-`^i0=)n,NIX!!)Kg!:Tsgn,NIX!!)Kg!-eJDGQ;,2
+!'hM(^^^Bq#D3!Wqu?~>} imagemask
+ }
+  70 /G46 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 822 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+873 425 M 
+(F)S 
+; : 844 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+895 425 M 
+(D)S 
+; : 868 425 153 51 rc 734  VM?
+pagesave restore
+/G4F [14.0 0.0 1.0 0.0 12.0 35.0 ]
+/G4F {
+    11 35 true [1 0 0 -1 -1.0 35.0 ]
+{<~IK9?I
+*WQZM%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=
+%KHt=%KHt=%KHt=%KHt=s53~>} imagemask
+ }
+  79 /G4F MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 868 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+919 425 M 
+(O)S 
+; : 898 425 153 51 rc 734  VM?
+pagesave restore
+/G28 [33.0 0.0 2.0 0.0 32.0 34.0 ]
+/G28 {
+    30 34 true [1 0 0 -1 -2.0 34.0 ]
+{<~s8W,W
+%tFc?#ClgD#Clen#Cle.#Cle.#Cldc#Cldc#Cldc#Cldc#Cm?s#Cm?c#Cm?c
+#Cm?c#CnK.#Cpan#QO8n#Cpan#CnK.#Cm?c#Cm?c#Cm?g#Cm?g#Cld_#Cld[
+#Cld[#Cld[#Cldk#Cldk#Cldk#Cle.#Clen%tFcOs8W,g~>} imagemask
+ }
+  40 /G28 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 898 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+949 425 M 
+(\()S 
+; : 931 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+982 425 M 
+(U)S 
+; : 950 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1001 425 M 
+(U)S 
+; : 969 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1020 425 M 
+(R)S 
+; : 993 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1044 425 M 
+(U)S 
+; : 1012 425 153 51 rc 734  VM?
+pagesave restore
+/G56 [19.0 0.0 1.0 0.0 17.0 22.0 ]
+/G56 {
+    16 22 true [1 0 0 -1 -1.0 22.0 ]
+{<~&*>he
+?k0sV^]qRUhu`BLIK2V%+8>s9!$6Y$J-Wjl^]V@Shu`BPp`.WL~>} imagemask
+ }
+  86 /G56 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1012 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1063 425 M 
+(V)S 
+; : 1048 425 153 51 rc 734  VM?
+pagesave restore
+/G49 [15.0 0.0 1.0 0.0 17.0 35.0 ]
+/G49 {
+    16 35 true [1 0 0 -1 -1.0 35.0 ]
+{<~!.4ge
+"-3Zt"qM1D%KHt=%KHt=%KHt=%KQP(%KHt=%KHt=%KHt=%KHt=%KHt=%KHt=
+%KHt=%KHt=%KHt=%KI">s6p~>} imagemask
+ }
+  73 /G49 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1048 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1099 425 M 
+(I)S 
+; : 1063 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1114 425 M 
+(R)S 
+; : 1087 425 153 51 rc 734  VM?
+pagesave restore
+/G58 [27.0 0.0 1.0 0.0 25.0 22.0 ]
+/G58 {
+    24 22 true [1 0 0 -1 -1.0 22.0 ]
+{<~rWDrp
+"8Eo;GRa^5%KJHu!&tGg3">pJ%KJHu!&tGg3">pJ%KJHu!&tGg3">pJ%KJHu
+!-etRp]ghE"+katr-n~>} imagemask
+ }
+  88 /G58 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1087 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1138 425 M 
+(X)S 
+; : 1114 425 153 51 rc 734  VM?
+pagesave restore
+/G51 [27.0 0.0 1.0 0.0 26.0 22.0 ]
+/G51 {
+    25 22 true [1 0 0 -1 -1.0 22.0 ]
+{<~rXXMZ
+r\371*^FZE%Y-55%feQh%feQh%KJHg%KJHg%KJHg%KJHg%KJHg%KJHg%KJHg
+%KJHg%KJHg%KJHg%KJHg%KJHg%KJHg%KJHg%KJHgs5X-0~>} imagemask
+ }
+  81 /G51 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1114 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1165 425 M 
+(Q)S 
+; : 1141 425 153 51 rc 734  VM?
+pagesave restore
+/G47 [27.0 0.0 2.0 0.0 26.0 35.0 ]
+/G47 {
+    24 35 true [1 0 0 -1 -2.0 35.0 ]
+{<~!!D]j
+#Oh]nn,NH-!!$s<!,qo<Du]lW!!$s<!,qo<Du]lW!!$s=pi$ImE"2nf*!#If
+!-!/_E-MA%DuakH!-%E-E:<jHn,RFs!-%E-E:<jHGQ;]-!,smtE#\lI%KZ&(
+#'^1DIf~>} imagemask
+ }
+  71 /G47 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1141 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1192 425 M 
+(G)S 
+; : 1185 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1236 425 M 
+(L)S 
+; : 1198 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1249 425 M 
+(Q)S 
+; : 1242 425 153 51 rc 734  VM?
+pagesave restore
+/G3F [24.0 0.0 7.0 20.0 22.0 35.0 ]
+/G3F {
+    15 15 true [1 0 0 -1 -7.0 35.0 ]
+{<~#Qt\I
++:')$5S-0lJ09@bJ09@b\30OMr'#?H3",~>} imagemask
+ }
+  63 /G3F MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1242 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1293 425 M 
+(?)S 
+; : 1266 425 153 51 rc 734  VM?
+pagesave restore
+/G36 [27.0 0.0 2.0 -1.0 24.0 35.0 ]
+/G36 {
+    22 36 true [1 0 0 -1 -2.0 35.0 ]
+{<~"8EE;
+"qVUPYV6(HDuaib!-$ir0]2pbhuF>H!"eW"&F]Z2p](;A!!%Ma!'gA]+9-j%
+s1ea:huH"2!!i9!!;HNoHiO./J,h]^!$$Lh*.S#/^]5@i!#XVo38acjn,RFO
+!8t`q^juCa~>} imagemask
+ }
+  54 /G36 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1266 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1317 425 M 
+(6)S 
+; : 1293 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1344 425 M 
+(S)S 
+; : 1320 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1371 425 M 
+(D)S 
+; : 1345 425 153 51 rc 734  VM?
+pagesave restore
+/G57 [19.0 0.0 1.0 0.0 16.0 31.0 ]
+/G57 {
+    15 31 true [1 0 0 -1 -1.0 31.0 ]
+{<~!WW9%
+!WW9%"oni-"oo,5*WSG&s83?,%KHt=%KHt=%KHt=%KHt=%KHt=%K[+A%K[+A
+%KZh9#6Y-f!:T~>} imagemask
+ }
+  87 /G57 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1345 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1396 425 M 
+(W)S 
+; : 1364 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1415 425 M 
+(L)S 
+; : 1377 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1428 425 M 
+(D)S 
+; : 1402 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1453 425 M 
+(O)S 
+; : 1431 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1482 425 M 
+(\()S 
+; : 1465 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1516 425 M 
+(U)S 
+; : 1484 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1535 425 M 
+(U)S 
+; : 1502 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1553 425 M 
+(R)S 
+; : 1527 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1578 425 M 
+(U)S 
+; : 1562 425 153 51 rc 734  VM?
+pagesave restore
+/G24 [37.0 0.0 1.0 0.0 35.0 35.0 ]
+/G24 {
+    34 35 true [1 0 0 -1 -1.0 35.0 ]
+{<~!!'e7
+!!!&8!!!!"^]4?7!T3qX!!D-Z!!!,Z!!!!#n,NFg"RlBk!!N&s!!!.H!!!!)
+GQ7^D#Wr(e!!k[e!!!Qm!!!!1*WQ0?0HL2o!$E<_!!",P!!!!a%fcS05S!hp
+!'gd>!!%NSJ,fTLs1eU7J-3Re!<<5;!!*'%huEcX!T3qZ!!2!X!WW8j!!3-#
+n,NXm!:Tsm!!%6D%KHKR!$;1@quHc4#QMR~>} imagemask
+ }
+  36 /G24 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1562 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1613 425 M 
+($)S 
+; : 1599 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1650 425 M 
+(Q)S 
+; : 1626 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1677 425 M 
+(D)S 
+; : 1650 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1701 425 M 
+(O)S 
+; : 1664 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1715 425 M 
+(\\)S 
+; : 1689 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1740 425 M 
+(V)S 
+; : 1709 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1760 425 M 
+(L)S 
+; : 1722 425 153 51 rc 0 0 0 sco F0_50
+Ji 
+1773 425 M 
+(V)S 
+; : 1741 425 153 51 rc 734  VM?
+pagesave restore
+/G05 [24.0 0.0 1.0 20.0 16.0 35.0 ]
+/G05 {
+    15 15 true [1 0 0 -1 -1.0 35.0 ]
+{<~E&dVT
+r'($BF?Tg/"9J]-"9Ji3#Qt\E0F2%t5Tg~>} imagemask
+ }
+  5 /G05 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1741 425 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1792 425 M 
+(\005)S 
+; : 743 483 153 51 rc 734  VM?
+pagesave restore
+/G0B [19.0 0.0 5.0 -12.0 16.0 37.0 ]
+/G0B {
+    11 49 true [1 0 0 -1 -5.0 37.0 ]
+{<~!$D9W
+!.Y*#!rrN*"oo&3)upfU(]ZMq0E?%lDuahWDua8GhuM[8huM[8huM[8huM[8
+huM[8huM[8?iXR7DuahWDu_Ql2uko<(]YNU$ig\9"on`*!rr@P!5JSB!$D~>} imagemask
+ }
+  11 /G0B MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 743 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+794 483 M 
+(\013)S 
+; : 762 483 153 51 rc 734  VM?
+pagesave restore
+/G45 [27.0 0.0 1.0 0.0 25.0 35.0 ]
+/G45 {
+    24 35 true [1 0 0 -1 -1.0 35.0 ]
+{<~IK0BI
+!!"&?!"Ju/%KHJ=!!!K/!"Ju/%KHJ=!!!K/!"Ju/%KHJ=++Oi/i!t9V%feR!
+!#uIK*Y&/[%KI"L!"TP>%h8RM%KI"L!"TP>%h8RL%KIO[!$2UM*"N$/%=iC+
+iSXu+!!~>} imagemask
+ }
+  69 /G45 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 762 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+813 483 M 
+(E)S 
+; : 791 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+842 483 M 
+(R)S 
+; : 817 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+868 483 M 
+(R)S 
+; : 841 483 153 51 rc 734  VM?
+pagesave restore
+/G4E [26.0 0.0 1.0 0.0 25.0 35.0 ]
+/G4E {
+    24 35 true [1 0 0 -1 -1.0 35.0 ]
+{<~IK0BI
+!!"&?!"Ju/%KHJ=!!!K/!"Ju/%KHJ=!!!K/!"Ju/%KHJ="9&c2n.#K7%KV(i
+!<<T6!"KD;%N#0U0E;UX!"\u-&"EV1%KHtL!"K56%Kh4k"2GBIi!obF%KPu.
+!;QTQrr~>} imagemask
+ }
+  78 /G4E MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 841 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+892 483 M 
+(N)S 
+; : 867 483 153 51 rc 734  VM?
+pagesave restore
+/G14 [24.0 0.0 4.0 0.0 19.0 33.0 ]
+/G14 {
+    15 33 true [1 0 0 -1 -4.0 33.0 ]
+{<~!.Y0%
+%tO8%"+UK("+UK("+UK("+UK("+UK("+UK("+UK("+UK("+UK("+UK("+UK(
+"+UK("+UK("+UWls8D~>} imagemask
+ }
+  20 /G14 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 867 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+918 483 M 
+(\024)S 
+; : 891 483 153 51 rc 734  VM?
+pagesave restore
+/G48 [22.0 0.0 1.0 0.0 20.0 22.0 ]
+/G48 {
+    19 22 true [1 0 0 -1 -1.0 22.0 ]
+{<~!W2p&
+#65/7J/A<;3!$g6!5NORi:$a)n,VDHs5<AH!:Tsgn,NIX!!$s<!-eJDGQ8jG
+!+6cH5RmdE#D3!Vqu?~>} imagemask
+ }
+  72 /G48 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 891 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+942 483 M 
+(H)S 
+; : 913 483 153 51 rc 734  VM?
+pagesave restore
+/G11 [14.0 0.0 4.0 0.0 9.0 5.0 ]
+/G11 {
+    5 5 true [1 0 0 -1 -4.0 5.0 ]
+{<~E;95'
+Du~>} imagemask
+ }
+  17 /G11 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 913 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+964 483 M 
+(\021)S 
+; : 926 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+977 483 M 
+(7)S 
+; : 953 493 153 51 rc 0 0 0 sco F0_50
+Ji 
+1004 493 M 
+(\()S 
+; : 981 483 153 51 rc 734  VM?
+pagesave restore
+/G3B [37.0 0.0 1.0 0.0 36.0 34.0 ]
+/G3B {
+    35 34 true [1 0 0 -1 -1.0 34.0 ]
+{<~J,BEK
+J-YQEp](ES!8mhZhuLOm!Up)>!!2Qi!!!#o!<<*"Hia9J!.4nL!!#1c!!!!@
+#QOi)*tSDP!"Y.k!!!8^!!!!$^]4?7"5j.Z!!2Qh!!!&h!!!!$p](9o!djtJ
+!!GCa!!!Ek!!!!)*rl9@&.\a@!&+q6!!",H^]4@""2Fm:J-4^0!.Y+>!!*'"
+n,NOj!;HO!J,jrs++O@j!<:sZs53~>} imagemask
+ }
+  59 /G3B MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 981 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1032 483 M 
+(;)S 
+; : 1017 483 153 51 rc 734  VM?
+pagesave restore
+/G0F [14.0 0.0 4.0 -9.0 9.0 5.0 ]
+/G0F {
+    5 14 true [1 0 0 -1 -4.0 5.0 ]
+{<~E:EYt
+BF"kL(_@6$?pF~>} imagemask
+ }
+  15 /G0F MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1017 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1068 483 M 
+(\017)S 
+; : 1047 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1098 483 M 
+($)S 
+; : 1083 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1134 483 M 
+(V)S 
+; : 1119 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1170 483 M 
+(R)S 
+; : 1143 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1194 483 M 
+(I)S 
+; : 1175 483 153 51 rc 734  VM?
+pagesave restore
+/G27 [37.0 0.0 2.0 0.0 35.0 34.0 ]
+/G27 {
+    33 34 true [1 0 0 -1 -2.0 34.0 ]
+{<~s8Vus
+!"XSj!!!7S"2FmAJ-"R.#ClgD!!e#SGQ7u!!'C5dJ,h\3#Cldq!!e#S*WQFq
+!$;1GJ,g)[#Cldb!!e#S%tFn8!"XSbJ,g+1#CldbJ-UT)%tFn8!"XSbJ,g+1
+#CldbJ-UT)%tFn8!"T&7J,gYk#Cldr!!e#S*WQFq!'UAfJ,h\3#Clf!!!e#S
+Du^,n!T3q_J-3Re%tG/j!<<)s!!!~>} imagemask
+ }
+  39 /G27 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1175 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1226 483 M 
+(')S 
+; : 1212 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1263 483 M 
+(H)S 
+; : 1233 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1284 483 M 
+(F)S 
+; : 1255 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1306 483 M 
+(H)S 
+; : 1277 483 153 51 rc 734  VM?
+pagesave restore
+/G50 [41.0 0.0 1.0 0.0 38.0 22.0 ]
+/G50 {
+    37 22 true [1 0 0 -1 -1.0 22.0 ]
+{<~r#^Ie
+!;p9C%KIK!jp(l,!+Z03*WUEeJ0"]8"+V?kE!(V1!,r$j)usp[J/eQ."+V?k
+E!(V1!,r$j)usp[J/eQ."+V?kE!(V1!,r$j)usp[J/eQ."+V?kE!(V1!,r$j
+)usp[JH*[i5PP~>} imagemask
+ }
+  80 /G50 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1277 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1328 483 M 
+(P)S 
+; : 1316 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1367 483 M 
+(E)S 
+; : 1345 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1396 483 M 
+(H)S 
+; : 1366 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1417 483 M 
+(U)S 
+; : 1401 483 153 51 rc 734  VM?
+pagesave restore
+/G15 [24.0 0.0 2.0 0.0 22.0 33.0 ]
+/G15 {
+    20 33 true [1 0 0 -1 -2.0 33.0 ]
+{<~"8Dj)
+*WQ`V!$DAo5QSYc!T8J.i:$a)p]0gY!:]a`i,A\S!!(pW!T3qY^]4Ie!!@`O
+#64`6!!!u=!&srY+92C,!!%NL!<<*$!"]85&-r7i&-*h;s58D,i;`i8s8V!~>} imagemask
+ }
+  21 /G15 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1401 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1452 483 M 
+(\025)S 
+; : 1426 483 153 51 rc 734  VM?
+pagesave restore
+/G19 [24.0 0.0 2.0 -1.0 22.0 33.0 ]
+/G19 {
+    20 34 true [1 0 0 -1 -2.0 33.0 ]
+{<~!'^Ga
+_12Uf5R%5H%KYK-!T4pt^c2;o2uir'!!$s<!,qo<nG!"T"p"?!JFilXp]82*
+!9!>Hi:$a9n,VtI!:]IXnF-GIDufBH!:Xq-n1Xk#2uqkR!PfZUJ.)M[#7^_7
+p](~>} imagemask
+ }
+  25 /G19 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1426 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1477 483 M 
+(\031)S 
+; : 1450 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1501 483 M 
+(\017)S 
+; : 1480 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1531 483 M 
+(\024)S 
+; : 1504 483 153 51 rc 734  VM?
+pagesave restore
+/G1C [24.0 0.0 2.0 -1.0 22.0 33.0 ]
+/G1C {
+    20 34 true [1 0 0 -1 -2.0 33.0 ]
+{<~!VcX"
+%KHn>!#u)k3!"PK!PiXS_!h?^n,VD9!9!>HnF-GIn,VtI!:]IXn8JBsDuoGf
+!Ur&Mn/MZ%"q9u%nF-DXhuEc8!!2!X!Pe[9^b>e>GQWJ@!s!9E!$D[M(cVL+
+huE~>} imagemask
+ }
+  28 /G1C MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1504 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1555 483 M 
+(\034)S 
+; : 1529 483 153 51 rc 734  VM?
+pagesave restore
+/G1B [24.0 0.0 2.0 -1.0 22.0 33.0 ]
+/G1B {
+    20 34 true [1 0 0 -1 -2.0 33.0 ]
+{<~"8Dj!
+%KI=J!$D8l5QH="!'idL5X5<7?iWH2!'ko3J3F!a5D&qX_uL>C!!Dur!W2p%
+IfKm!J2e(T0E^6@!T7>cnA#$C^]6((!&21g0YdZB?iV<W!+7J\^_d*&%L)n8
+p](~>} imagemask
+ }
+  27 /G1B MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1529 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1580 483 M 
+(\033)S 
+; : 1553 483 153 51 rc 0 0 0 sco F0_50
+Ji 
+1604 483 M 
+(\033)S 
+; : 1578 483 153 51 rc 734  VM?
+pagesave restore
+/G0C [19.0 0.0 3.0 -12.0 14.0 37.0 ]
+/G0C {
+    11 49 true [1 0 0 -1 -3.0 37.0 ]
+{<~J,isW
++94(q(]XsE$igJ3#64i+!rrFR!It3d!Pe`O!Pe]N!8mk8!8mk8!8mk8!8mk8
+!8mk8!8mk8!8mjm!Pe`O!Pe_d"+UK(!rrQ+"oni-$ih+E(]Z5i?i[tBJ,f~>} imagemask
+ }
+  12 /G0C MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1578 483 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1629 483 M 
+(\014)S 
+; : 825 590 162 51 rc pagesave restore
+%%BeginFont: MSTT31c1f600
+27000  VM?
+/MSTT31c1f600 [50.0 0 0 0 0 0] [-50.0 -50.0 50.0 50.0 ] [1 50 div 0 0 1 50 div 0 0] /MSTT31c1f600 GreNewFont
+%%EndFont
+(F1) cvn
+0.760 
+ (cmcsc10) cvn /TrueType 
+F 
+(MSTT31c1f600) cvn
+mF 
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 825 590 162 51 rc 734  VM?
+pagesave restore
+/G37 [39.0 0.0 2.0 0.0 36.0 34.0 ]
+/G37 {
+    34 34 true [1 0 0 -1 -2.0 34.0 ]
+{<~J,fQK
+J:%CU%tJ$ghuS?n!T4!/5QTdCJA;3D!5QANhuLQC!T3rCJ-"R.5_&mn!'l&8
+huH"B!T3qX!!2!X!!!&X!!!!"huE`W!T3qX!!2!X!!!&X!!!!"huE`W!T3qX
+!!2!X!!!&X!!!!"huE`W!T3qX!!2!X!!!&X!!!!"huE`W!T3qX!!2!X!!!&X
+!!!!"huE`W!T3qX!!D]j!!*'!^]4~>} imagemask
+ }
+  55 /G37 MSTT31c1f600 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 825 590 162 51 rc 0 0 0 sco (F1_50) cvn
+F1
+50 
+xF 
+F1_50
+Ji 
+879 590 M 
+(7)S 
+; : 860 590 162 51 rc 734  VM?
+pagesave restore
+/G44 [31.0 0.0 1.0 0.0 28.0 27.0 ]
+/G44 {
+    27 27 true [1 0 0 -1 -1.0 27.0 ]
+{<~!!E9%
+!!WE'!"Ju/!"T&0!#GV8!#GV8!#L.c!$d!o!$f8Z!+EYC!("C#!(#NC!.`u-
+!.`u-!J#+h!<@'=!<@?E!WY1["98,r!WY=_"ooVC"99DA$ih=K$igb;)upKL
+49-H'rr@Q,~>} imagemask
+ }
+  68 /G44 MSTT31c1f600 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 860 590 162 51 rc 0 0 0 sco (F1_50) cvn
+F1
+50 
+xF 
+F1_50
+Ji 
+914 590 M 
+(D)S 
+; : 891 590 162 51 rc 734  VM?
+pagesave restore
+/G45 [29.0 0.0 2.0 0.0 26.0 26.0 ]
+/G45 {
+    24 26 true [1 0 0 -1 -2.0 26.0 ]
+{<~s8TkE
+!:UHu3">pN%KIO[!$2UM*Y&/k%KIO[!'C_kGRac4&-%.i!,rDJ4:V?4%KIO[
+!"TP>%h8RM%KI"L!"KJ=*Y&04%KLbRs53~>} imagemask
+ }
+  69 /G45 MSTT31c1f600 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 891 590 162 51 rc 0 0 0 sco (F1_50) cvn
+F1
+50 
+xF 
+F1_50
+Ji 
+945 590 M 
+(E)S 
+; : 919 590 162 51 rc 734  VM?
+pagesave restore
+/G4F [26.0 0.0 2.0 0.0 24.0 26.0 ]
+/G4F {
+    22 26 true [1 0 0 -1 -2.0 26.0 ]
+{<~s7cR)
+J,g)[!"T&0%fcS?!!!N0!"T&0%fcS?!!!N0!"T&0%fcS?!!!N0!"T&0%fckG
+!!j)8#S-n@%fckG!#Q4H(_6U+%flD)s7c~>} imagemask
+ }
+  79 /G4F MSTT31c1f600 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 919 590 162 51 rc 0 0 0 sco (F1_50) cvn
+F1
+50 
+xF 
+F1_50
+Ji 
+973 590 M 
+(O)S 
+; : 945 590 162 51 rc 734  VM?
+pagesave restore
+/G48 [28.0 0.0 2.0 0.0 26.0 26.0 ]
+/G48 {
+    24 26 true [1 0 0 -1 -2.0 26.0 ]
+{<~s8W!-
+!#uLL%M&OD%fceE!!3Z2!Y584%flY@!<<W2!"T/3&,uV?!rri4!"T)2%fl\A
+!!*T1!=o/4%fc\B!!3Z2"qL\D%fefns8D~>} imagemask
+ }
+  72 /G48 MSTT31c1f600 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 945 590 162 51 rc 0 0 0 sco (F1_50) cvn
+F1
+50 
+xF 
+F1_50
+Ji 
+999 590 M 
+(H)S 
+; : 992 590 162 51 rc 734  VM?
+pagesave restore
+/G14 [28.0 0.0 5.0 0.0 23.0 33.0 ]
+/G14 {
+    18 33 true [1 0 0 -1 -5.0 33.0 ]
+{<~!+5d-
+huF#?!;YOQ!T3qYhuEf9!!2!X!T3qYhuEf9!!2!X!T3qYhuEf9!!2!X!T3qY
+huEf9!!2!X!T3qYhuEf9!!2!X!T3qYhuEf9!!2!X!T3qYhuEf9!!D]js8Tk~>} imagemask
+ }
+  20 /G14 MSTT31c1f600 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 992 590 162 51 rc 0 0 0 sco (F1_50) cvn
+F1
+50 
+xF 
+F1_50
+Ji 
+1046 590 M 
+(\024)S 
+; : 1019 590 162 51 rc 734  VM?
+pagesave restore
+/G11 [16.0 0.0 5.0 0.0 10.0 5.0 ]
+/G11 {
+    5 5 true [1 0 0 -1 -5.0 5.0 ]
+{<~E;95'
+Du~>} imagemask
+ }
+  17 /G11 MSTT31c1f600 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1019 590 162 51 rc 0 0 0 sco (F1_50) cvn
+F1
+50 
+xF 
+F1_50
+Ji 
+1073 590 M 
+(\021)S 
+; : 1062 590 153 51 rc 734  VM?
+pagesave restore
+/G26 [35.0 0.0 2.0 -1.0 32.0 35.0 ]
+/G26 {
+    30 36 true [1 0 0 -1 -2.0 35.0 ]
+{<~!!i9%
+!'USq!:U#J!T3t5"+UB!#Cle:%fcSl*WQ0[*WQ0[49,?iHiO-THiO-THiO-T
+p](9sp](9op](9op](9op](9op](9op](9op](9op](9oGQ7^DHiO-LHiO-L
+49,?a49,?a*WQ0G*WQ0G%fcS@#Cldc"2FmZ!T3rC!:Tu=!'UVf!!i9!~>} imagemask
+ }
+  38 /G26 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1062 590 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1113 590 M 
+(&)S 
+; : 1098 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1149 590 M 
+(R)S 
+; : 1122 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1173 590 M 
+(U)S 
+; : 1141 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1192 590 M 
+(U)S 
+; : 1160 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1211 590 M 
+(H)S 
+; : 1182 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1233 590 M 
+(F)S 
+; : 1203 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1254 590 M 
+(W)S 
+; : 1222 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1273 590 M 
+(L)S 
+; : 1236 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1287 590 M 
+(R)S 
+; : 1260 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1311 590 M 
+(Q)S 
+; : 1304 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1355 590 M 
+(I)S 
+; : 1318 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1369 590 M 
+(R)S 
+; : 1343 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1394 590 M 
+(U)S 
+; : 1378 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1429 590 M 
+(\()S 
+; : 1411 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1462 590 M 
+(U)S 
+; : 1430 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1481 590 M 
+(U)S 
+; : 1449 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1500 590 M 
+(R)S 
+; : 1474 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1525 590 M 
+(U)S 
+; : 1493 590 153 51 rc 0 0 0 sco F0_50
+Ji 
+1544 590 M 
+(V)S 
+; pagesave restore
+Pscript_Win_Driver_Incr begin
+%%BeginResource: file Pscript_Win_Graphics 2.0 0
+/SavedCTM null |/CTMsave{/SavedCTM SavedCTM currentmatrix |}b/CTMrestore{
+SavedCTM setmatrix}b/mp null |/ADO_mxRot null |/GDIHMatrix null |
+/GDIHPatternDict 22 dict | GDIHPatternDict `/PatternType 1 |/PaintType 2 |
+/Reps L2?{1}{5}? |/XStep 8 Reps mul |/YStep XStep |/BBox[0 0 XStep YStep]|
+/TilingType 1 |/PaintProc{` 1 Lw[]0 setdash PaintData , exec E}b/FGnd null |
+/BGnd null |/HS_Horizontal{horiz}b/HS_Vertical{vert}b/HS_FDiagonal{fdiag}b
+/HS_BDiagonal{biag}b/HS_Cross{horiz vert}b/HS_DiagCross{fdiag biag}b/MaxXYStep
+XStep YStep gt{XStep}{YStep}? |/horiz{Reps{0 4 M XStep 0 - 0 8 +}repeat 0 -8
+Reps mul + K}b/vert{Reps{4 0 M 0 YStep - 8 0 +}repeat 0 -8 Reps mul + K}b/biag
+{Reps{0 0 M MaxXYStep @ - 0 YStep neg M MaxXYStep @ - 0 8 +}repeat 0 -8 Reps
+mul + 0 YStep M 8 8 - K}b/fdiag{Reps{0 0 M MaxXYStep @ neg - 0 YStep M
+MaxXYStep @ neg - 0 8 +}repeat 0 -8 Reps mul + MaxXYStep @ M 8 -8 - K}b E
+/makehatch{GDIHPatternDict/PaintData 3 -1 $ put CTMsave GDIHMatrix setmatrix
+GDIHPatternDict matrix mp CTMrestore ~ U ~ 2 ^ put}b/h0{/h0/HS_Horizontal
+makehatch}b/h1{/h1/HS_Vertical makehatch}b/h2{/h2/HS_FDiagonal makehatch}b/h3{
+/h3/HS_BDiagonal makehatch}b/h4{/h4/HS_Cross makehatch}b/h5{/h5/HS_DiagCross
+makehatch}b/GDIBWPatternDict 17 dict @ `/PatternType 1 |/PaintType L2?{1}{2}?
+|/RepsV L2?{1}{6}? |/RepsH L2?{1}{5}? |/BBox[0 0 RepsH 1]|/TilingType 1 |
+/XStep 1 |/YStep 1 |/Height 8 RepsV mul |/Width 8 |/mx[Width 0 0 Height neg 0
+Height]|/FGnd null |/BGnd null |/SetBGndFGnd L2?{{BGnd null ne{BGnd aload !
+sgco BBox aload ! 2 ^ sub ~ 3 ^ sub ~ rf}if FGnd null ne{FGnd aload ! sgco}if}
+}{{}}? b/PaintProc{` SetBGndFGnd RepsH{Width Height F mx PaintData imagemask
+Width 0 +}repeat E}b E |/GDIBWPatternMx null |/pfprep{save 4 1 $
+/PatternOfTheDay 4 1 $ GDIBWPatternDict `/PaintData ~ |/BGnd ~ |/FGnd ~ | E
+CTMsave GDIBWPatternMx setmatrix GDIBWPatternDict matrix mp CTMrestore ~ !}b
+/hrf null |/prf{pfprep ~ 6 1 $ 5 hrf restore}b/GraphInit{GDIHMatrix null eq{
+/SavedCTM matrix | : ADO_mxRot concat 0 0 snap + : 0.48 @ GDIHPatternDict `
+YStep mul ~ XStep mul ~ dsnap YStep V ~ XStep V ~ E +S/GDIHMatrix matrix
+currentmatrix readonly | ; : 0.24 -0.24 +S GDIBWPatternDict ` Width Height E
+dsnap +S/GDIBWPatternMx matrix currentmatrix readonly | ; ;}if}b/cirp{360 0 An
+C}b/ellp{CTMsave + +S 0.5 0 M 0 0 0.5 360 0 An C CTMrestore}b/rrp{/rad ~ |/y2
+~ |/x2 ~ |/y1 ~ |/x1 ~ | x2 x1 add 2 V y1 M x1 y1 x1 y2 rad arct x1 y2 x2 y2
+rad arct x2 y2 x2 y1 rad arct x2 y1 x1 y1 rad arct C}b/RRp{CTMsave + +S/dyS ~
+|/dxS ~ | dxS 2 V 0 M 0 0 0 dyS 0.5 arct 0 dyS dxS dyS 0.5 arct dxS dyS dxS 0
+0.5 arct dxS 0 0 0 0.5 arct C CTMrestore}b
+%%EndResource
+
+%%BeginResource: file Pscript_Win_Graphics_L1 2.0 0
+L2? not g{/arct{arcto ! ! ! !}b/GDIpattfill{@ ` BGnd null ne PaintType 2 eq
+and{: BGnd aload ! sgco fEOFill{O}{L}? ; FGnd aload ! U/fGray 2 ^ put{2}{4}?
+-1 $}if E @ patterncalc : 4 ^/PaintType get 2 eq{fGray{6 -1 $ sg}{8 -3 $ sco}?
+}if fEOFill{eoclip}{clip}? N patternfill ; N}b/hrf{/fGray 1 ^ 6 eq | -4 $ N rp
+C/fEOFill F | GDIpattfill}b/hfMain{/fEOFill ~ |/fGray ~ | GDIpattfill}b/hf{T
+hfMain}b/hfW{F hfMain}b/hs{currentpoint strokepath M hfW}b/pfMain{/fEOFill ~ |
+pfprep GDIpattfill restore N}b/pf{T pfMain}b/pfW{F pfMain}b/ps{currentpoint
+strokepath M pfW}b/mpstr 1 string |/mp{~ @ length 12 add dict copy `
+/PatternCTM matrix currentmatrix |/PatternMatrix ~ |/PatWidth XStep mpstr
+length mul |/PatHeight YStep |/FontType 3 |/Encoding 256 array | 3 string 0 1
+255{Encoding ~ @ 3 ^ cvs cvn put}for !/FontMatrix matrix |/FontBBox BBox |
+/BuildChar{! @ ` XStep 0 FontBBox aload ! setcachedevice/PaintProc , E : exec
+;}b & E ~ @ 3 -1 $ definefont}b/patterncalc{` : PatternCTM setmatrix
+PatternMatrix concat BBox aload ! ! ! + pathbbox ; PatHeight V ceiling 4 1 $
+PatWidth V ceiling 4 1 $ PatHeight V floor 4 1 $ PatWidth V floor 4 1 $ 2 ^
+sub cvi abs ~ 3 ^ sub cvi abs ~ 4 2 $ PatHeight mul ~ PatWidth mul ~ E}b
+/patternfill{5 -1 $ @ ` Ji PatternCTM setmatrix PatternMatrix concat 0 2 ^ 2 ^
+M 0 1 mpstr length 1 sub{1 ^ mpstr 3 1 $ put}for ! 2 ^{currentpoint 5 ^{mpstr
+S}repeat YStep add M}repeat ! ! ! ! E}b}e
+%%EndResource
+
+%%BeginResource: file Pscript_Win_Graphics_L2 2.0 0
+L2? g{/mp/makepattern , |/hrf{6 eq setAorABC setpattern rectfill}b/hf{
+setAorABC setpattern O}b/hfW{setAorABC setpattern L}b/hs{setAorABC setpattern
+K}b/pf{pfprep setpattern O restore N}b/pfW{pfprep setpattern L restore N}b/ps{
+pfprep setpattern K restore N}b}e
+%%EndResource
+
+end reinitialize
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+
+171 692 N M 1990 2 rr : 0 0 0 sco O ; 
+171 692 N M 1990 2 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+171 693 N M 2 59 rr : 0 0 0 sco O ; 
+171 693 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 693 N M 2 59 rr : 0 0 0 sco O ; 
+171 693 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 142 696 153 51 rc 734  VM?
+pagesave restore
+/G33 [33.0 0.0 2.0 0.0 30.0 34.0 ]
+/G33 {
+    28 34 true [1 0 0 -1 -2.0 34.0 ]
+{<~s8VQg
+%tG]$#Cm&0#Clol#Clol#Clj5#CljE#CljE#CljE#CljE#CljE#CljE#Clj5
+#Clp7#Clol#Cm&0#Cmiq#QOQ!#CldS#CldS#CldS#CldS#CldS#CldS#CldS
+#CldS#CldS#CldS#CldS#CldS#CldS#CldS&&8/Fs82is~>} imagemask
+ }
+  51 /G33 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 142 696 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+193 696 M 
+(3)S 
+; : 174 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+225 696 M 
+(D)S 
+; : 199 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+250 696 M 
+(J)S 
+; : 223 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+274 696 M 
+(H)S 
+; 
+316 693 N M 2 59 rr : 0 0 0 sco O ; 
+316 693 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+316 693 N M 2 59 rr : 0 0 0 sco O ; 
+316 693 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 450 696 153 51 rc 734  VM?
+pagesave restore
+/G2F [31.0 0.0 2.0 0.0 28.0 34.0 ]
+/G2F {
+    26 34 true [1 0 0 -1 -2.0 34.0 ]
+{<~s8Duu
+&&8/F#CldS#CldS#CldS#CldS#CldS#CldS#CldS#CldS#CldS#CldS#CldS
+#CldS#CldS#CldS#CldS#CldS#CldS#CldS#CldS#Cle>#Cle>#Cle>#Cle>
+#Cle>#Cle>#Clfi#Clfi#Clij#Clol#Cm&0%tGaPs8W+L~>} imagemask
+ }
+  47 /G2F MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 450 696 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+501 696 M 
+(/)S 
+; : 481 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+532 696 M 
+(L)S 
+; : 494 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+545 696 M 
+(Q)S 
+; : 521 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+572 696 M 
+(H)S 
+; : 559 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+610 696 M 
+(R)S 
+; : 584 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+635 696 M 
+(U)S 
+; : 619 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+670 696 M 
+(\()S 
+; : 652 696 153 51 rc 734  VM?
+pagesave restore
+/G54 [26.0 0.0 2.0 -9.0 26.0 22.0 ]
+/G54 {
+    24 31 true [1 0 0 -1 -2.0 22.0 ]
+{<~!Vd32
+L+j)<0H:(s494kq!-!/_E,Yern,RFs!-%E-E:<jHn,RFs!,ulWE-MA%GQ;\F
+!:Us/n.#Kg#DR0upi$35Du]lW!!$s<!,qo<Du]lW!!$s<!,qoCrr~>} imagemask
+ }
+  84 /G54 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 652 696 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+703 696 M 
+(T)S 
+; : 678 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+729 696 M 
+(X)S 
+; : 705 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+756 696 M 
+(D)S 
+; : 729 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+780 696 M 
+(W)S 
+; : 748 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+799 696 M 
+(L)S 
+; : 762 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+813 696 M 
+(R)S 
+; : 786 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+837 696 M 
+(Q)S 
+; 
+1047 693 N M 2 59 rr : 0 0 0 sco O ; 
+1047 693 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1047 693 N M 2 59 rr : 0 0 0 sco O ; 
+1047 693 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1218 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1269 696 M 
+(\()S 
+; : 1251 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1302 696 M 
+(U)S 
+; : 1270 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1321 696 M 
+(U)S 
+; : 1289 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1340 696 M 
+(R)S 
+; : 1313 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1364 696 M 
+(U)S 
+; 
+1603 693 N M 2 59 rr : 0 0 0 sco O ; 
+1603 693 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1603 693 N M 2 59 rr : 0 0 0 sco O ; 
+1603 693 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1718 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1769 696 M 
+(&)S 
+; : 1754 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1805 696 M 
+(R)S 
+; : 1778 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1829 696 M 
+(U)S 
+; : 1797 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1848 696 M 
+(U)S 
+; : 1816 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1867 696 M 
+(H)S 
+; : 1838 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1889 696 M 
+(F)S 
+; : 1859 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1910 696 M 
+(W)S 
+; : 1878 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1929 696 M 
+(L)S 
+; : 1892 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1943 696 M 
+(R)S 
+; : 1916 696 153 51 rc 0 0 0 sco F0_50
+Ji 
+1967 696 M 
+(Q)S 
+; 
+2159 693 N M 2 59 rr : 0 0 0 sco O ; 
+2159 693 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 693 N M 2 59 rr : 0 0 0 sco O ; 
+2159 693 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 751 N M 1990 2 rr : 0 0 0 sco O ; 
+171 751 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 752 N M 2 59 rr : 0 0 0 sco O ; 
+171 752 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 752 N M 2 59 rr : 0 0 0 sco O ; 
+171 752 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 169 756 153 51 rc 734  VM?
+pagesave restore
+/G17 [24.0 0.0 1.0 0.0 23.0 34.0 ]
+/G17 {
+    22 34 true [1 0 0 -1 -1.0 34.0 ]
+{<~!!%NL
+!It.PJ,f\%!!e#S$\/3bJ,g75!$d!o,Cfb]J,k4P!/#e&"+UFTJ-#h'"9X/_
+"+UXZJ.Mg50EZhJ"+WW=JA;8;J-1?%s82j%J,fh)!!e#S#CldZJ,fh)!!g:>
+J,B~>} imagemask
+ }
+  23 /G17 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 169 756 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+220 756 M 
+(\027)S 
+; : 194 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+245 756 M 
+(\025)S 
+; 
+316 752 N M 2 59 rr : 0 0 0 sco O ; 
+316 752 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+316 752 N M 2 59 rr : 0 0 0 sco O ; 
+316 752 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 288 756 153 51 rc 734  VM?
+pagesave restore
+/G16 [24.0 0.0 2.0 -1.0 22.0 33.0 ]
+/G16 {
+    20 34 true [1 0 0 -1 -2.0 33.0 ]
+{<~"8Dj+
+%fdFKJ04s0GQH`M!T8>+i-YR`3!%q;!T3q[^]4Ie!!e#S#64`D!!D]j!"Ju/
+#CldV^]4Jp!!2!X!Up'in8JEtp]9mZ!V#jbnF-J:5QTe."2H#]^^pa$%NYTP
+p](~>} imagemask
+ }
+  22 /G16 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 288 756 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+339 756 M 
+(\026)S 
+; : 312 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+363 756 M 
+(U)S 
+; : 331 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+382 756 M 
+(G)S 
+; : 375 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+426 756 M 
+(O)S 
+; : 388 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+439 756 M 
+(L)S 
+; : 402 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+453 756 M 
+(Q)S 
+; : 429 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+480 756 M 
+(H)S 
+; : 467 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+518 756 M 
+(G)S 
+; : 494 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+545 756 M 
+(R)S 
+; : 517 756 153 51 rc 734  VM?
+pagesave restore
+/G5A [35.0 0.0 1.0 0.0 34.0 22.0 ]
+/G5A {
+    33 22 true [1 0 0 -1 -1.0 22.0 ]
+{<~^^L3N
+!<:C?It/R@^`EIs!5K!C%KO9M!"K"e#QP)0i",kn!:UO"#6AcT!!@dk+92Lp
+GTZtgJiFkQ!Q$f]!!1"X5QCi'*'aK(j;`[M!9aoC!!)3mJ,fRo%fcS0E!H@C
+!,r/C!!"\W!!!~>} imagemask
+ }
+  90 /G5A MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 517 756 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+568 756 M 
+(Z)S 
+; : 552 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+603 756 M 
+(Q)S 
+; : 595 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+646 756 M 
+(I)S 
+; : 610 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+661 756 M 
+(U)S 
+; : 629 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+680 756 M 
+(R)S 
+; : 654 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+705 756 M 
+(P)S 
+; : 711 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+762 756 M 
+(\()S 
+; : 744 756 153 51 rc 734  VM?
+pagesave restore
+/G5B [26.0 0.0 0.0 0.0 25.0 22.0 ]
+/G5B {
+    25 22 true [1 0 0 -1 0.0 22.0 ]
+{<~huS?.
+s2"^8++SS9#Cp1^#Co&>"2KEe!T="Y!94%Z!:g*i!.4bH!'C5]!$2+?!'UA_
+!,hi;!(VP>!/&&e!J/#d!s.<[!W_]i"p"Du*ru3=s+13#~>} imagemask
+ }
+  91 /G5B MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 744 756 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+795 756 M 
+([)S 
+; : 770 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+821 756 M 
+(D)S 
+; : 794 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+845 756 M 
+(P)S 
+; : 835 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+886 756 M 
+(S)S 
+; : 862 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+913 756 M 
+(O)S 
+; : 875 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+926 756 M 
+(H)S 
+; : 913 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+964 756 M 
+(\027)S 
+; : 938 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+989 756 M 
+(\021)S 
+; : 951 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1002 756 M 
+(\027)S 
+; 
+1047 752 N M 2 59 rr : 0 0 0 sco O ; 
+1047 752 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1047 752 N M 2 59 rr : 0 0 0 sco O ; 
+1047 752 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1160 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1211 756 M 
+(W)S 
+; : 1179 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1230 756 M 
+(K)S 
+; : 1206 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1257 756 M 
+(L)S 
+; : 1220 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1271 756 M 
+(V)S 
+; : 1255 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1306 756 M 
+(F)S 
+; : 1277 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1328 756 M 
+(L)S 
+; : 1291 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1342 756 M 
+(U)S 
+; : 1310 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1361 756 M 
+(F)S 
+; : 1331 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1382 756 M 
+(O)S 
+; : 1345 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1396 756 M 
+(H)S 
+; : 1367 756 153 51 rc 734  VM?
+pagesave restore
+/G22 [23.0 0.0 2.0 0.0 20.0 35.0 ]
+/G22 {
+    18 35 true [1 0 0 -1 -2.0 35.0 ]
+{<~#P\99
+*WTRQ!'gX:hugda"2OC.^gI8[!!C":"+U@VJ,g)[!$2+?(]XOi!!"\Q!+5d,
+5QCdL!!'e7!.Y%LJ,fS"!!%NL!.Y%LJ,fQLzz!!!&8!!D-Z"5j.]huEen!!~>} imagemask
+ }
+  34 /G22 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1367 756 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1418 756 M 
+(")S 
+; 
+1603 752 N M 2 59 rr : 0 0 0 sco O ; 
+1603 752 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1603 752 N M 2 59 rr : 0 0 0 sco O ; 
+1603 752 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1721 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1772 756 M 
+(W)S 
+; : 1740 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1791 756 M 
+(K)S 
+; : 1767 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1818 756 M 
+(L)S 
+; : 1781 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1832 756 M 
+(V)S 
+; : 1816 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1867 756 M 
+(F)S 
+; : 1838 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1889 756 M 
+(L)S 
+; : 1851 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1902 756 M 
+(U)S 
+; : 1870 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1921 756 M 
+(F)S 
+; : 1892 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1943 756 M 
+(O)S 
+; : 1905 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1956 756 M 
+(H)S 
+; : 1927 756 153 51 rc 0 0 0 sco F0_50
+Ji 
+1978 756 M 
+(\021)S 
+; 
+2159 752 N M 2 59 rr : 0 0 0 sco O ; 
+2159 752 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 752 N M 2 59 rr : 0 0 0 sco O ; 
+2159 752 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 811 N M 1990 2 rr : 0 0 0 sco O ; 
+171 811 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 812 N M 2 59 rr : 0 0 0 sco O ; 
+171 812 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 812 N M 2 59 rr : 0 0 0 sco O ; 
+171 812 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 812 N M 2 59 rr : 0 0 0 sco O ; 
+316 812 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 812 N M 2 59 rr : 0 0 0 sco O ; 
+316 812 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1047 812 N M 2 59 rr : 0 0 0 sco O ; 
+1047 812 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1047 812 N M 2 59 rr : 0 0 0 sco O ; 
+1047 812 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1603 812 N M 2 59 rr : 0 0 0 sco O ; 
+1603 812 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1603 812 N M 2 59 rr : 0 0 0 sco O ; 
+1603 812 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 812 N M 2 59 rr : 0 0 0 sco O ; 
+2159 812 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 812 N M 2 59 rr : 0 0 0 sco O ; 
+2159 812 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 824 N M 2 65 rr : 0 0 0 sco O ; 
+171 824 N M 2 65 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 824 N M 2 65 rr : 0 0 0 sco O ; 
+171 824 N M 2 65 rr : 0 0 0 sco O ; 0 0 0 sco K : 157 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+208 833 M 
+(\024)S 
+; : 181 833 153 51 rc 734  VM?
+pagesave restore
+/G13 [24.0 0.0 2.0 -1.0 22.0 33.0 ]
+/G13 {
+    20 34 true [1 0 0 -1 -2.0 33.0 ]
+{<~!VcX"
+%KHn>!#u)k3!$fS!PiXSi,A\SDueg8!9!>HnF-GIn,VtI!:]IXnF-GIn,VtI
+!:]IXnF-GIn,VtI!:]IXnF-GIDueg8!8qeri-5:\3!$fS!PfZWJ.;ea#7^_7
+p](~>} imagemask
+ }
+  19 /G13 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 181 833 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+232 833 M 
+(\023)S 
+; : 206 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+257 833 M 
+(\027)S 
+; 
+316 824 N M 2 65 rr : 0 0 0 sco O ; 
+316 824 N M 2 65 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+316 824 N M 2 65 rr : 0 0 0 sco O ; 
+316 824 N M 2 65 rr : 0 0 0 sco O ; 0 0 0 sco K : 361 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+412 833 M 
+(\()S 
+; : 394 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+445 833 M 
+(T)S 
+; : 420 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+471 833 M 
+(X)S 
+; : 447 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+498 833 M 
+(D)S 
+; : 471 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+522 833 M 
+(W)S 
+; : 490 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+541 833 M 
+(L)S 
+; : 504 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+555 833 M 
+(R)S 
+; : 528 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+579 833 M 
+(Q)S 
+; : 555 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+606 833 M 
+(V)S 
+; : 591 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+642 833 M 
+(\013)S 
+; : 610 833 153 51 rc 734  VM?
+pagesave restore
+/G1A [24.0 0.0 2.0 -1.0 23.0 34.0 ]
+/G1A {
+    21 35 true [1 0 0 -1 -2.0 34.0 ]
+{<~5QCdl
+!!%NKpj`>5J,f$,s5:Zm5_&jMJ,k+M!<<*$!!!'#!!E9%#QOi1!!!Q1!&+BQ
+0E;)\!!$C,!8mhWhuEbm!!0k8!Pe[9^]4DN!!C":"2Fm=^]4JP!!C":"2Fm=
+^]4Cc!!~>} imagemask
+ }
+  26 /G1A MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 610 833 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+661 833 M 
+(\032)S 
+; : 634 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+685 833 M 
+(\021)S 
+; : 648 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+699 833 M 
+(\031)S 
+; : 672 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+723 833 M 
+(\014)S 
+; : 707 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+758 833 M 
+(D)S 
+; : 732 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+783 833 M 
+(Q)S 
+; : 759 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+810 833 M 
+(G)S 
+; : 802 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+853 833 M 
+(\013)S 
+; : 821 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+872 833 M 
+(\032)S 
+; : 846 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+897 833 M 
+(\021)S 
+; : 859 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+910 833 M 
+(\032)S 
+; : 883 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+934 833 M 
+(\014)S 
+; 
+1047 824 N M 2 65 rr : 0 0 0 sco O ; 
+1047 824 N M 2 65 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1047 824 N M 2 65 rr : 0 0 0 sco O ; 
+1047 824 N M 2 65 rr : 0 0 0 sco O ; 0 0 0 sco K : 1089 789 222 187 rc pagesave restore
+%%BeginFont: MSTT31c2a600
+27000  VM?
+/MSTT31c2a600 [50.0 0 0 0 0 0] [-50.0 -50.0 50.0 50.0 ] [1 50 div 0 0 1 50 div 0 0] /MSTT31c2a600 GreNewFont
+%%EndFont
+(F2) cvn
+0.780 
+ (cmex10) cvn /TrueType 
+F 
+(MSTT31c2a600) cvn
+mF 
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1089 789 222 187 rc 4039  VM?
+pagesave restore
+/G53 [50.0 0.0 4.0 -58.0 50.0 2.0 ]
+/G53 {
+    46 60 true [1 0 0 -1 -4.0 2.0 ]
+{<~z
+!"8i-!!!!-z!#P\9!!!!9z!&+BQ!!!!Qz!+5d,!!!",z!5JR7!!!#7z!Pe[8
+!!!%Mz"+U@O!!!*$z#64`(!!!3'z%KHJ/!!!E-z)uos=!!!i9z(]XO9!!"\Q
+z0E;(Q!!$C,z?iU0,!!'e7z^]4?7!!.TM!!!!"J,fQL!!<3$!<<*%!!!*$!!WE'
+%tFWa!!"*k!"Ju/-bo]j!!#C%!#tt="2FmR!!!&X!&srY!T3r3!!!&h!,qo<
+!:Ttr!!!#o!8mhW!-eLZ!!!"D!5JR7!'C:4!!!!]!It.M!'UJb!!!!?!rr<$
+!$;CF!!!!0"onW'!"TJ<!!!!(MuWhX!!ekk!!!!(fDkmO!!D]j!!!!$n,NFg
+!!2!X!!!!"huE`W!!(pWz^]4?7~>} imagemask
+ }
+  83 /G53 MSTT31c2a600 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1089 789 222 187 rc 0 0 0 sco (F2_50) cvn
+F2
+50 
+xF 
+F2_50
+Ji 
+1163 789 M 
+(S)S 
+; 
+1213 826 N M 277 2 rr : 0 0 0 sco O ; 
+1213 826 N M 277 2 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K : 1160 833 159 51 rc pagesave restore
+%%BeginFont: MSTT31c29000
+27000  VM?
+/MSTT31c29000 [50.0 0 0 0 0 0] [-50.0 -50.0 50.0 50.0 ] [1 50 div 0 0 1 50 div 0 0] /MSTT31c29000 GreNewFont
+%%EndFont
+(F3) cvn
+0.760 
+ (cmmi12) cvn /TrueType 
+F 
+(MSTT31c29000) cvn
+mF 
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1160 833 159 51 rc 734  VM?
+pagesave restore
+/GA0 [28.0 0.0 2.0 0.0 28.0 22.0 ]
+/GA0 {
+    26 22 true [1 0 0 -1 -2.0 22.0 ]
+{<~!'gM!
+!WW28"98CO#Jn1U%fkMf*WTRJ490=#2ummtGQ;[_DuahWDuahWn,VqXhuM[8
+huM[8huVa9huUUnhueK0?ipB/E!?:B0FRp](cVKq#N,R^~>} imagemask
+ }
+  160 /GA0 MSTT31c29000 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1160 833 159 51 rc 0 0 0 sco (F3_50) cvn
+F3
+50 
+xF 
+F3_50
+Ji 
+1213 833 M 
+(\240)S 
+; : 1206 829 108 33 rc pagesave restore
+%%BeginFont: MSTT31c28600
+27000  VM?
+/MSTT31c28600 [33.0 0 0 0 0 0] [-33.0 -33.0 33.0 33.0 ] [1 33 div 0 0 1 33 div 0 0] /MSTT31c28600 GreNewFont
+%%EndFont
+(F4) cvn
+0.758 
+ (cmr8) cvn /TrueType 
+F 
+(MSTT31c28600) cvn
+mF 
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1206 829 108 33 rc 950  VM?
+pagesave restore
+/G15 [18.0 0.0 2.0 0.0 16.0 22.0 ]
+/G15 {
+    14 22 true [1 0 0 -1 -2.0 22.0 ]
+{<~&&9mg
+5WF9Ri#LYpi#D_:!#ttu!&sst!8mmn!<<0$"9]PE0FWI+s7lWh~>} imagemask
+ }
+  21 /G15 MSTT31c28600 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1206 829 108 33 rc 0 0 0 sco (F4_33) cvn
+F4
+33 
+xF 
+F4_33
+Ji 
+1242 829 M 
+(\025)S 
+; : 1204 858 108 33 rc 950  VM?
+pagesave restore
+/G14 [18.0 0.0 3.0 0.0 15.0 22.0 ]
+/G14 {
+    12 22 true [1 0 0 -1 -3.0 22.0 ]
+{<~!rri3
+pAbEu#64u/#64u/#64u/#64u/#64u/#64u/#64u/#64u/#698C~>} imagemask
+ }
+  20 /G14 MSTT31c28600 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1204 858 108 33 rc 0 0 0 sco (F4_33) cvn
+F4
+33 
+xF 
+F4_33
+Ji 
+1240 858 M 
+(\024)S 
+; : 1222 833 153 51 rc 734  VM?
+pagesave restore
+/G0E [38.0 0.0 2.0 -4.0 33.0 29.0 ]
+/G0E {
+    31 33 true [1 0 0 -1 -2.0 29.0 ]
+{<~!!*'"
+!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"
+!!*'"!!*'"s8W,u!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"
+!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"!!*'"~>} imagemask
+ }
+  14 /G0E MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1222 833 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1273 833 M 
+(\016)S 
+; : 1269 833 159 51 rc 0 0 0 sco (F3_50) cvn
+F3
+50 
+xF 
+F3_50
+Ji 
+1322 833 M 
+(\240)S 
+; : 1315 829 108 33 rc 0 0 0 sco (F4_33) cvn
+F4
+33 
+xF 
+F4_33
+Ji 
+1351 829 M 
+(\025)S 
+; : 1314 858 108 33 rc 0 0 0 sco F4_33
+Ji 
+1350 858 M 
+(\025)S 
+; : 1325 832 171 87 rc pagesave restore
+%%BeginFont: MSTT31c29b00
+27000  VM?
+/MSTT31c29b00 [50.0 0 0 0 0 0] [-50.0 -50.0 50.0 50.0 ] [1 50 div 0 0 1 50 div 0 0] /MSTT31c29b00 GreNewFont
+%%EndFont
+(F5) cvn
+0.780 
+ (cmsy10) cvn /TrueType 
+F 
+(MSTT31c29b00) cvn
+mF 
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1325 832 171 87 rc 1252  VM?
+pagesave restore
+/G83 [39.0 0.0 4.0 12.0 35.0 14.0 ]
+/G83 {
+    31 2 true [1 0 0 -1 -4.0 14.0 ]
+{<~s8W,u
+s8W,u~>} imagemask
+ }
+  131 /G83 MSTT31c29b00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1325 832 171 87 rc 0 0 0 sco (F5_50) cvn
+F5
+50 
+xF 
+F5_50
+Ji 
+1382 832 M 
+(\203)S 
+; : 1379 833 159 51 rc 734  VM?
+pagesave restore
+/G1D [14.0 0.0 4.0 0.0 9.0 5.0 ]
+/G1D {
+    5 5 true [1 0 0 -1 -4.0 5.0 ]
+{<~E;95'
+Du~>} imagemask
+ }
+  29 /G1D MSTT31c29000 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1379 833 159 51 rc 0 0 0 sco (F3_50) cvn
+F3
+50 
+xF 
+F3_50
+Ji 
+1432 833 M 
+(\035)S 
+; : 1401 833 159 51 rc 0 0 0 sco F3_50
+Ji 
+1454 833 M 
+(\035)S 
+; : 1423 833 159 51 rc 0 0 0 sco F3_50
+Ji 
+1476 833 M 
+(\035)S 
+; 
+1603 824 N M 2 65 rr : 0 0 0 sco O ; 
+1603 824 N M 2 65 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1603 824 N M 2 65 rr : 0 0 0 sco O ; 
+1603 824 N M 2 65 rr : 0 0 0 sco O ; 0 0 0 sco K : 1616 789 222 187 rc 0 0 0 sco (F2_50) cvn
+F2
+50 
+xF 
+F2_50
+Ji 
+1690 789 M 
+(S)S 
+; 
+1740 826 N M 335 2 rr : 0 0 0 sco O ; 
+1740 826 N M 335 2 rr : 0 0 0 sco O ; 0 0 0 sco K : 1689 833 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1740 833 M 
+(\013)S 
+; : 1706 833 159 51 rc 0 0 0 sco F3_50
+Ji 
+1759 833 M 
+(\240)S 
+; : 1752 829 108 33 rc 0 0 0 sco (F4_33) cvn
+F4
+33 
+xF 
+F4_33
+Ji 
+1788 829 M 
+(\025)S 
+; : 1750 858 108 33 rc 0 0 0 sco F4_33
+Ji 
+1786 858 M 
+(\024)S 
+; : 1768 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+1819 833 M 
+(\016)S 
+; : 1815 833 159 51 rc 0 0 0 sco F3_50
+Ji 
+1868 833 M 
+(\240)S 
+; : 1861 829 108 33 rc 0 0 0 sco F4_33
+Ji 
+1897 829 M 
+(\025)S 
+; : 1860 858 108 33 rc 0 0 0 sco F4_33
+Ji 
+1896 858 M 
+(\025)S 
+; : 1866 833 153 51 rc 0 0 0 sco F0_50
+Ji 
+1917 833 M 
+(\014)S 
+; : 1900 832 108 33 rc 0 0 0 sco F4_33
+Ji 
+1936 832 M 
+(\025)S 
+; : 1910 832 171 87 rc 0 0 0 sco (F5_50) cvn
+F5
+50 
+xF 
+F5_50
+Ji 
+1967 832 M 
+(\203)S 
+; : 1964 833 159 51 rc 0 0 0 sco F3_50
+Ji 
+2017 833 M 
+(\035)S 
+; : 1985 833 159 51 rc 0 0 0 sco F3_50
+Ji 
+2038 833 M 
+(\035)S 
+; : 2007 833 159 51 rc 0 0 0 sco F3_50
+Ji 
+2060 833 M 
+(\035)S 
+; 
+2159 824 N M 2 65 rr : 0 0 0 sco O ; 
+2159 824 N M 2 65 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 824 N M 2 65 rr : 0 0 0 sco O ; 
+2159 824 N M 2 65 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 888 N M 1990 2 rr : 0 0 0 sco O ; 
+171 888 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 889 N M 2 59 rr : 0 0 0 sco O ; 
+171 889 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 889 N M 2 59 rr : 0 0 0 sco O ; 
+171 889 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 169 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+220 893 M 
+(\033)S 
+; : 194 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+245 893 M 
+(\024)S 
+; 
+316 889 N M 2 59 rr : 0 0 0 sco O ; 
+316 889 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 889 N M 2 59 rr : 0 0 0 sco O ; 
+316 889 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 473 893 153 51 rc 734  VM?
+pagesave restore
+/G30 [45.0 0.0 2.0 0.0 43.0 34.0 ]
+/G30 {
+    41 34 true [1 0 0 -1 -2.0 34.0 ]
+{<~s*t(M
+s*tW1!!2ip"i(*?n,NX-!!;Wi"lK@^n,NUL!!Mck"Q07_n,NU\!!Mck"E4>H
+n,NT1!!r&o"?6Amn,NSN!"eW""?ZYqn,NS2!$Lb2"<7Can,NS4!+>9r":bDs
+n,NS$!'p#R":"pWn,NRr!.aP=":'I-n,NRnJH50>"9X2Tn,NRn_>s'*"9H@>
+n,NRl_>s'*"9@K_n,NRkj8eZL"9A2sn,NRkGQ@45"9<ZHn,NjsDufA-*rmtq
+p]1?P0H^=F~>} imagemask
+ }
+  48 /G30 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 473 893 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+524 893 M 
+(0)S 
+; : 518 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+569 893 M 
+(L)S 
+; : 531 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+582 893 M 
+(G)S 
+; : 558 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+609 893 M 
+(G)S 
+; : 586 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+637 893 M 
+(O)S 
+; : 599 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+650 893 M 
+(H)S 
+; : 637 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+688 893 M 
+(R)S 
+; : 661 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+712 893 M 
+(I)S 
+; : 693 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+744 893 M 
+(S)S 
+; : 720 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+771 893 M 
+(D)S 
+; : 744 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+795 893 M 
+(J)S 
+; : 768 893 153 51 rc 0 0 0 sco F0_50
+Ji 
+819 893 M 
+(H)S 
+; 
+1047 889 N M 2 59 rr : 0 0 0 sco O ; 
+1047 889 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1047 889 N M 2 59 rr : 0 0 0 sco O ; 
+1047 889 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1219 893 159 51 rc 734  VM?
+pagesave restore
+/G47 [25.0 0.0 2.0 0.0 25.0 35.0 ]
+/G47 {
+    23 35 true [1 0 0 -1 -2.0 35.0 ]
+{<~!!!K/
+!<)ru*WQ0M!!!u=!#tt=)uosY!!"tY!&srY2uiq<!!$s<HuK,'E!$,["p*Wl
+!8ngsi&C_p3!$g>!PiXT^i0=in,n41"+];3JD^N_i!0DC#6`rq#[e_[E&SUf
+@h90%hu~>} imagemask
+ }
+  71 /G47 MSTT31c29000 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1219 893 159 51 rc 0 0 0 sco (F3_50) cvn
+F3
+50 
+xF 
+F3_50
+Ji 
+1272 893 M 
+(G)S 
+; : 1244 893 159 51 rc 734  VM?
+pagesave restore
+/G9D [21.0 0.0 1.0 -10.0 22.0 35.0 ]
+/G9D {
+    21 45 true [1 0 0 -1 -1.0 35.0 ]
+{<~!!iQ)
+#QOi1!!!9)!!i9!)@-=_n,VAH"2Fm=J,fh)!"T&0%fcS?!!!N0!"T&0#64`/
+!!!-$J-5h%"98E-!!!Q1!&+BQ+92CL!!#7a!5JR7^]4AM!!(pW!:TsgGQ7_n
+!!#7!!"\i)"9&9#rr<$@J,fh)!!@`O"+UCS!!("=!'C5~>} imagemask
+ }
+  157 /G9D MSTT31c29000 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1244 893 159 51 rc 0 0 0 sco (F3_50) cvn
+F3
+50 
+xF 
+F3_50
+Ji 
+1297 893 M 
+(\235)S 
+; : 1276 893 159 51 rc 0 0 0 sco F3_50
+Ji 
+1329 893 M 
+(G)S 
+; : 1301 893 159 51 rc 734  VM?
+pagesave restore
+/G96 [24.0 0.0 1.0 -10.0 24.0 22.0 ]
+/G96 {
+    23 32 true [1 0 0 -1 -1.0 22.0 ]
+{<~*s(jc
+L)_AX$t7Km6/W5?^^e84%YK9O"+V?r!#u4D*!ZI'#66^n!&tGg3">q-%KLGf
+!,rnXE#\l9*!"nV!8n[ohuEen!!0k8!Pe[9^]4Ie!!@`O"+U@RJ,ffS~>} imagemask
+ }
+  150 /G96 MSTT31c29000 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1301 893 159 51 rc 0 0 0 sco (F3_50) cvn
+F3
+50 
+xF 
+F3_50
+Ji 
+1354 893 M 
+(\226)S 
+; 
+1603 889 N M 2 59 rr : 0 0 0 sco O ; 
+1603 889 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1603 889 N M 2 59 rr : 0 0 0 sco O ; 
+1603 889 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1745 893 159 51 rc 0 0 0 sco F3_50
+Ji 
+1798 893 M 
+(G)S 
+; : 1770 893 159 51 rc 0 0 0 sco F3_50
+Ji 
+1823 893 M 
+(\235)S 
+; : 1803 893 159 51 rc 0 0 0 sco F3_50
+Ji 
+1856 893 M 
+(G)S 
+; : 1828 893 159 51 rc 0 0 0 sco F3_50
+Ji 
+1881 893 M 
+(\226)S 
+; : 1862 893 159 51 rc 0 0 0 sco F3_50
+Ji 
+1915 893 M 
+(G)S 
+; : 1887 893 159 51 rc 734  VM?
+pagesave restore
+/G95 [21.0 0.0 2.0 -10.0 23.0 35.0 ]
+/G95 {
+    21 45 true [1 0 0 -1 -2.0 35.0 ]
+{<~!!E9%
+"98E)!!!-%!!W,t%L<%Tn,P-B!+5d,^]4Cc!!<3$#64`6!!!E-!#tt=(]XOq
+!!"\Q!,qo<Du]lG!!(pW!8mhWhuEc8!!(pW!8mhWhuEcH!!%6D!.4bH56([*
+huF;c!!3'!!'^G`#CldVJ,fV#!!.TM!<<3(!!1(>!.4b~>} imagemask
+ }
+  149 /G95 MSTT31c29000 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1887 893 159 51 rc 0 0 0 sco (F3_50) cvn
+F3
+50 
+xF 
+F3_50
+Ji 
+1940 893 M 
+(\225)S 
+; 
+2159 889 N M 2 59 rr : 0 0 0 sco O ; 
+2159 889 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+2159 889 N M 2 59 rr : 0 0 0 sco O ; 
+2159 889 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 948 N M 1990 2 rr : 0 0 0 sco O ; 
+171 948 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 949 N M 2 59 rr : 0 0 0 sco O ; 
+171 949 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 949 N M 2 59 rr : 0 0 0 sco O ; 
+171 949 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 169 953 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+220 953 M 
+(\033)S 
+; : 194 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+245 953 M 
+(\024)S 
+; 
+316 949 N M 2 59 rr : 0 0 0 sco O ; 
+316 949 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 949 N M 2 59 rr : 0 0 0 sco O ; 
+316 949 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 423 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+474 953 M 
+(/)S 
+; : 454 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+505 953 M 
+(L)S 
+; : 467 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+518 953 M 
+(Q)S 
+; : 494 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+545 953 M 
+(H)S 
+; : 516 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+567 953 M 
+(V)S 
+; : 552 953 153 51 rc 734  VM?
+pagesave restore
+/G18 [24.0 0.0 2.0 -1.0 22.0 33.0 ]
+/G18 {
+    20 34 true [1 0 0 -1 -2.0 33.0 ]
+{<~(]_>n
+s*u3k!$D+=([qD9!!!Q1!"],1&-)\A!!!Q1!"],1&bl>B"ooVFJ/A=&&-9QH
+!T3qXhuEcH!!)Kg!:Tsgn6c7cn,VtI!:\nHi4o?N5QTe.!Pff[J/ALk$k<7>
+p](~>} imagemask
+ }
+  24 /G18 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 552 953 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+603 953 M 
+(\030)S 
+; : 576 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+627 953 M 
+(\017)S 
+; : 606 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+657 953 M 
+(\031)S 
+; : 646 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+697 953 M 
+(\013)S 
+; : 665 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+716 953 M 
+(E)S 
+; : 694 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+745 953 M 
+(R)S 
+; : 718 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+769 953 M 
+(W)S 
+; : 737 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+788 953 M 
+(W)S 
+; : 756 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+807 953 M 
+(R)S 
+; : 780 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+831 953 M 
+(P)S 
+; : 821 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+872 953 M 
+(\014)S 
+; 
+1047 949 N M 2 59 rr : 0 0 0 sco O ; 
+1047 949 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1047 949 N M 2 59 rr : 0 0 0 sco O ; 
+1047 949 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1207 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1258 953 M 
+(\023)S 
+; : 1232 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1283 953 M 
+(\021)S 
+; : 1245 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1296 953 M 
+(\031)S 
+; : 1270 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1321 953 M 
+(\033)S 
+; : 1294 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1345 953 M 
+(\031)S 
+; : 1318 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1369 953 M 
+(\031)S 
+; 
+1603 949 N M 2 59 rr : 0 0 0 sco O ; 
+1603 949 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1603 949 N M 2 59 rr : 0 0 0 sco O ; 
+1603 949 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1763 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1814 953 M 
+(\023)S 
+; : 1787 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1838 953 M 
+(\021)S 
+; : 1801 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1852 953 M 
+(\031)S 
+; : 1825 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1876 953 M 
+(\033)S 
+; : 1850 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1901 953 M 
+(\032)S 
+; : 1874 953 153 51 rc 0 0 0 sco F0_50
+Ji 
+1925 953 M 
+(\032)S 
+; 
+2159 949 N M 2 59 rr : 0 0 0 sco O ; 
+2159 949 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 949 N M 2 59 rr : 0 0 0 sco O ; 
+2159 949 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1008 N M 1990 2 rr : 0 0 0 sco O ; 
+171 1008 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1009 N M 2 59 rr : 0 0 0 sco O ; 
+171 1009 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1009 N M 2 59 rr : 0 0 0 sco O ; 
+171 1009 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 169 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+220 1013 M 
+(\033)S 
+; : 194 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+245 1013 M 
+(\025)S 
+; 
+316 1009 N M 2 59 rr : 0 0 0 sco O ; 
+316 1009 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 1009 N M 2 59 rr : 0 0 0 sco O ; 
+316 1009 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 464 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+515 1013 M 
+(\()S 
+; : 497 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+548 1013 M 
+(T)S 
+; : 523 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+574 1013 M 
+(X)S 
+; : 550 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+601 1013 M 
+(D)S 
+; : 574 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+625 1013 M 
+(W)S 
+; : 593 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+644 1013 M 
+(L)S 
+; : 607 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+658 1013 M 
+(R)S 
+; : 631 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+682 1013 M 
+(Q)S 
+; : 675 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+726 1013 M 
+(\013)S 
+; : 694 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+745 1013 M 
+(\030)S 
+; : 718 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+769 1013 M 
+(\021)S 
+; : 732 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+783 1013 M 
+(\025)S 
+; : 756 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+807 1013 M 
+(\027)S 
+; : 780 1013 153 51 rc 0 0 0 sco F0_50
+Ji 
+831 1013 M 
+(\014)S 
+; 
+1047 1009 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1009 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1047 1009 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1009 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1217 1013 159 51 rc 0 0 0 sco (F3_50) cvn
+F3
+50 
+xF 
+F3_50
+Ji 
+1270 1013 M 
+(G)S 
+; : 1242 1013 159 51 rc 734  VM?
+pagesave restore
+/G5B [28.0 0.0 1.0 0.0 25.0 22.0 ]
+/G5B {
+    24 22 true [1 0 0 -1 -1.0 22.0 ]
+{<~!Ur2U
+(r?[jLDUI20FeU9%LsTk!!"&?!#tt=)uosY!!#+]!&srY2uiq<!!%6JE,YsL
+E")7*#iN3(6Ps2p%tF~>} imagemask
+ }
+  91 /G5B MSTT31c29000 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1242 1013 159 51 rc 0 0 0 sco (F3_50) cvn
+F3
+50 
+xF 
+F3_50
+Ji 
+1295 1013 M 
+([)S 
+; : 1278 1013 159 51 rc 0 0 0 sco F3_50
+Ji 
+1331 1013 M 
+(G)S 
+; : 1304 1013 159 51 rc 734  VM?
+pagesave restore
+/G5C [24.0 0.0 1.0 -10.0 24.0 22.0 ]
+/G5C {
+    23 32 true [1 0 0 -1 -1.0 22.0 ]
+{<~#Clpo
+^^`'V*$F/Z5i<Wui#KSK3.o"+"+W?5J2ddaE!HA^#68]R!,rDJi!obF%KPDs
+!T4Fg^]jnV!tW0Jq7lt4J,f\%!!@a2#68uQ!-etRE#\jc2ukYj!"XS[~>} imagemask
+ }
+  92 /G5C MSTT31c29000 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1304 1013 159 51 rc 0 0 0 sco (F3_50) cvn
+F3
+50 
+xF 
+F3_50
+Ji 
+1357 1013 M 
+(\\)S 
+; 
+1603 1009 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1009 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1603 1009 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1009 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1743 1013 159 51 rc 0 0 0 sco F3_50
+Ji 
+1796 1013 M 
+(G)S 
+; : 1769 1013 159 51 rc 0 0 0 sco F3_50
+Ji 
+1822 1013 M 
+([)S 
+; : 1805 1013 159 51 rc 0 0 0 sco F3_50
+Ji 
+1858 1013 M 
+(G)S 
+; : 1830 1013 159 51 rc 0 0 0 sco F3_50
+Ji 
+1883 1013 M 
+(\\)S 
+; : 1864 1013 159 51 rc 0 0 0 sco F3_50
+Ji 
+1917 1013 M 
+(G)S 
+; : 1889 1013 159 51 rc 734  VM?
+pagesave restore
+/G5D [23.0 0.0 2.0 0.0 23.0 22.0 ]
+/G5D {
+    21 22 true [1 0 0 -1 -2.0 22.0 ]
+{<~!:U6p
+p_X,20Eqd?$in'K!It.P!!!3'!"8i-(]XOi!!$C,!5JR8J,fZO+9hfg$ijZP
+!5LgMJ8tU>5lUh749,~>} imagemask
+ }
+  93 /G5D MSTT31c29000 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1889 1013 159 51 rc 0 0 0 sco (F3_50) cvn
+F3
+50 
+xF 
+F3_50
+Ji 
+1942 1013 M 
+(])S 
+; 
+2159 1009 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1009 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+2159 1009 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1009 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1068 N M 1990 2 rr : 0 0 0 sco O ; 
+171 1068 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1069 N M 2 59 rr : 0 0 0 sco O ; 
+171 1069 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1069 N M 2 59 rr : 0 0 0 sco O ; 
+171 1069 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 169 1072 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+220 1072 M 
+(\033)S 
+; : 194 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+245 1072 M 
+(\027)S 
+; 
+316 1069 N M 2 59 rr : 0 0 0 sco O ; 
+316 1069 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 1069 N M 2 59 rr : 0 0 0 sco O ; 
+316 1069 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 423 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+474 1072 M 
+(/)S 
+; : 454 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+505 1072 M 
+(L)S 
+; : 467 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+518 1072 M 
+(Q)S 
+; : 494 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+545 1072 M 
+(H)S 
+; : 516 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+567 1072 M 
+(V)S 
+; : 552 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+603 1072 M 
+(\025)S 
+; : 576 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+627 1072 M 
+(\017)S 
+; : 606 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+657 1072 M 
+(\026)S 
+; : 646 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+697 1072 M 
+(\013)S 
+; : 665 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+716 1072 M 
+(E)S 
+; : 694 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+745 1072 M 
+(R)S 
+; : 718 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+769 1072 M 
+(W)S 
+; : 737 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+788 1072 M 
+(W)S 
+; : 756 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+807 1072 M 
+(R)S 
+; : 780 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+831 1072 M 
+(P)S 
+; : 821 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+872 1072 M 
+(\014)S 
+; 
+1047 1069 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1069 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1047 1069 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1069 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1207 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1258 1072 M 
+(\023)S 
+; : 1232 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1283 1072 M 
+(\021)S 
+; : 1245 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1296 1072 M 
+(\024)S 
+; : 1270 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1321 1072 M 
+(\023)S 
+; : 1294 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1345 1072 M 
+(\023)S 
+; : 1318 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1369 1072 M 
+(\031)S 
+; 
+1603 1069 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1069 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1603 1069 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1069 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1763 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1814 1072 M 
+(\023)S 
+; : 1787 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1838 1072 M 
+(\021)S 
+; : 1801 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1852 1072 M 
+(\024)S 
+; : 1825 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1876 1072 M 
+(\024)S 
+; : 1850 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1901 1072 M 
+(\031)S 
+; : 1874 1072 153 51 rc 0 0 0 sco F0_50
+Ji 
+1925 1072 M 
+(\034)S 
+; 
+2159 1069 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1069 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 1069 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1069 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1127 N M 1990 2 rr : 0 0 0 sco O ; 
+171 1127 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1129 N M 2 59 rr : 0 0 0 sco O ; 
+171 1129 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1129 N M 2 59 rr : 0 0 0 sco O ; 
+171 1129 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 157 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+208 1132 M 
+(\024)S 
+; : 181 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+232 1132 M 
+(\033)S 
+; : 206 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+257 1132 M 
+(\030)S 
+; 
+316 1129 N M 2 59 rr : 0 0 0 sco O ; 
+316 1129 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 1129 N M 2 59 rr : 0 0 0 sco O ; 
+316 1129 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 448 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+499 1132 M 
+(/)S 
+; : 478 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+529 1132 M 
+(L)S 
+; : 492 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+543 1132 M 
+(Q)S 
+; : 519 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+570 1132 M 
+(H)S 
+; : 557 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+608 1132 M 
+(\024)S 
+; : 581 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+632 1132 M 
+(\031)S 
+; : 622 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+673 1132 M 
+(\013)S 
+; : 641 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+692 1132 M 
+(E)S 
+; : 669 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+720 1132 M 
+(R)S 
+; : 694 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+745 1132 M 
+(W)S 
+; : 713 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+764 1132 M 
+(W)S 
+; : 732 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+783 1132 M 
+(R)S 
+; : 756 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+807 1132 M 
+(P)S 
+; : 797 1132 153 51 rc 0 0 0 sco F0_50
+Ji 
+848 1132 M 
+(\014)S 
+; 
+1047 1129 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1129 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1047 1129 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1129 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1041 1135 87 47 rc pagesave restore
+%%BeginFont: MSTT31c2b100
+27000  VM?
+/MSTT31c2b100 [50.0 0 0 0 0 0] [-50.0 -50.0 50.0 50.0 ] [1 50 div 0 0 1 50 div 0 0] /MSTT31c2b100 GreNewFont
+%%EndFont
+(F6) cvn
+0.700 
+ (cmtt12) cvn /TrueType 
+F 
+(MSTT31c2b100) cvn
+mF 
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1041 1135 87 47 rc 338  VM?
+pagesave restore
+/G08 [26.0 0.0 1.0 -4.0 23.0 35.0 ]
+/G08 {
+    22 39 true [1 0 0 -1 -1.0 35.0 ]
+{<~)usA1
+!-!Dfi-,1Zj+6.KJ\^;s^uL&tj+DmBLOaRR!.P4R4q7Q4%KHJM!!!u=!#tt=
+49,@@!!"tY!,qo<Du]n-!!(pW!8mhX^]4DNhuggb",$@NLV*kI*!Z]g#6u4Y
+#943Y*$,3l*!>sU!Upp+hu~>} imagemask
+ }
+  8 /G08 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1041 1135 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1070 1135 M 
+(\010)S 
+; : 1066 1135 87 47 rc 338  VM?
+pagesave restore
+/G55 [26.0 0.0 2.0 0.0 24.0 22.0 ]
+/G55 {
+    22 22 true [1 0 0 -1 -2.0 22.0 ]
+{<~s+C+H
+O8T$Mqucp<"8E]8n,NRK!!C":"2Fm=J,f\%!!@`O"+U@RJ,f\%!!@`O"+U@R
+J,f\%!<<'!s8N*!rr<~>} imagemask
+ }
+  85 /G55 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1066 1135 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1095 1135 M 
+(U)S 
+; : 1092 1135 87 47 rc 338  VM?
+pagesave restore
+/G4B [26.0 0.0 1.0 0.0 25.0 31.0 ]
+/G4B {
+    24 31 true [1 0 0 -1 -1.0 31.0 ]
+{<~rVurt
+!!)uu!"Ju/%KHJ=!!!K/!"Ju/%KHJ=*rle#^^pJ'&)c@VJFF'LE";qf%KLGX
+!,rDJE"2ke%KLGX!,rDJE"2ke%KLGX!,rDJE"2kes6'F^kPtSFrr~>} imagemask
+ }
+  75 /G4B MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1092 1135 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1121 1135 M 
+(K)S 
+; : 1118 1135 87 47 rc 338  VM?
+pagesave restore
+/G52 [26.0 0.0 3.0 0.0 23.0 22.0 ]
+/G52 {
+    20 22 true [1 0 0 -1 -3.0 22.0 ]
+{<~!VcX"
+rW!K/!$2Aq49NBD!T7nsi,A\chuI`S!-$irE8U_8huI`S!-%E-n8JBcGQH_b
+"2GuhJ.MY[#Q=](p](~>} imagemask
+ }
+  82 /G52 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1118 1135 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1147 1135 M 
+(R)S 
+; : 1143 1135 87 47 rc 338  VM?
+pagesave restore
+/G20 [26.0 0.0 2.0 10.0 24.0 21.0 ]
+/G20 {
+    22 11 true [1 0 0 -1 -2.0 21.0 ]
+{<~s8W#s
+s8;osqu?]szzzs8W#ss8;osp]~>} imagemask
+ }
+  32 /G20 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1143 1135 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1172 1135 M 
+( )S 
+; : 1169 1135 87 47 rc 338  VM?
+pagesave restore
+/G3E [26.0 0.0 11.0 -4.0 24.0 35.0 ]
+/G3E {
+    13 39 true [1 0 0 -1 -11.0 35.0 ]
+{<~s7$'`
+s7"qHhuM[8huM[8huM[8huM[8huM[8huM[8huM[8huM[8huM[8huM[8huM[8
+huM[8huM[8huM[8huM[8huM[8s7$'`s6p~>} imagemask
+ }
+  62 /G3E MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1169 1135 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1198 1135 M 
+(>)S 
+; : 1194 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1223 1135 M 
+(U)S 
+; : 1220 1135 87 47 rc 338  VM?
+pagesave restore
+/G14 [26.0 0.0 5.0 0.0 21.0 31.0 ]
+/G14 {
+    16 31 true [1 0 0 -1 -5.0 31.0 ]
+{<~!Pe`O
+"2G#S#J^kcs1nTKn\>1@!Pe`O!Pe`O!Pe`O!Pe`O!Pe`O!Pe`O!Pe`O!Pe`O
+!Pe`OJ,b#uJ,]~>} imagemask
+ }
+  20 /G14 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1220 1135 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1249 1135 M 
+(\024)S 
+; : 1246 1135 87 47 rc 338  VM?
+pagesave restore
+/G15 [26.0 0.0 2.0 0.0 23.0 31.0 ]
+/G15 {
+    21 31 true [1 0 0 -1 -2.0 31.0 ]
+{<~"8i-0
+rr=/@^ci"]GQH`A!:\nHE8U^UhuGap!'!4D2uiq<!!%6D!,qo<n,NIH!!0k8
+"2FmIJ,gYk!'C5]GQ7a5!!2!X#J^<MJ,gVj3'71#J,f<Ds7lWop]~>} imagemask
+ }
+  21 /G15 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1246 1135 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1275 1135 M 
+(\025)S 
+; : 1271 1135 87 47 rc 338  VM?
+pagesave restore
+/G0F [26.0 0.0 9.0 -6.0 17.0 5.0 ]
+/G0F {
+    8 11 true [1 0 0 -1 -9.0 5.0 ]
+{<~4FVd0
+Il@lZI/)V~>} imagemask
+ }
+  15 /G0F MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1271 1135 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1300 1135 M 
+(\017)S 
+; : 1323 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1352 1135 M 
+(U)S 
+; : 1348 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1377 1135 M 
+(\024)S 
+; : 1374 1135 87 47 rc 338  VM?
+pagesave restore
+/G16 [26.0 0.0 2.0 0.0 23.0 31.0 ]
+/G16 {
+    21 31 true [1 0 0 -1 -2.0 31.0 ]
+{<~"8i-0
+s*u3k^cV_WDueg8!,ulWE,Yer!!$s<!,qo<huEf9!!C";s*t.M!!3,8!!D-Z
+!:TsgDu]l_!!"tY!'&m:38acrhuJ#[!,ulWn9tJt5QAM0rr<)t!!~>} imagemask
+ }
+  22 /G16 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1374 1135 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1403 1135 M 
+(\026)S 
+; : 1399 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1428 1135 M 
+(\017)S 
+; : 1451 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1480 1135 M 
+(U)S 
+; : 1476 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1505 1135 M 
+(\025)S 
+; : 1502 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1531 1135 M 
+(\026)S 
+; : 1528 1135 87 47 rc 338  VM?
+pagesave restore
+/G40 [26.0 0.0 2.0 -4.0 15.0 35.0 ]
+/G40 {
+    13 39 true [1 0 0 -1 -2.0 35.0 ]
+{<~s7lWh
+s7cRR!&ss<!&ss<!&ss<!&ss<!&ss<!&ss<!&ss<!&ss<!&ss<!&ss<!&ss<
+!&ss<!&ss<!&ss<!&ss<!&ss<s7lWhs7c~>} imagemask
+ }
+  64 /G40 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1528 1135 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1557 1135 M 
+(@)S 
+; 
+1603 1129 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1129 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1603 1129 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1129 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1596 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1625 1135 M 
+(\010)S 
+; : 1622 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1651 1135 M 
+(U)S 
+; : 1648 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1677 1135 M 
+(K)S 
+; : 1673 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1702 1135 M 
+(R)S 
+; : 1699 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1728 1135 M 
+( )S 
+; : 1725 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1754 1135 M 
+(>)S 
+; : 1750 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1779 1135 M 
+(U)S 
+; : 1776 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1805 1135 M 
+(\024)S 
+; : 1802 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1831 1135 M 
+(\025)S 
+; : 1827 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1856 1135 M 
+(\017)S 
+; : 1878 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1907 1135 M 
+(U)S 
+; : 1904 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1933 1135 M 
+(\025)S 
+; : 1930 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1959 1135 M 
+(\026)S 
+; : 1955 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+1984 1135 M 
+(\017)S 
+; : 2007 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+2036 1135 M 
+(U)S 
+; : 2032 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+2061 1135 M 
+(\024)S 
+; : 2058 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+2087 1135 M 
+(\026)S 
+; : 2083 1135 87 47 rc 0 0 0 sco F6_50
+Ji 
+2112 1135 M 
+(@)S 
+; 
+2159 1129 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1129 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 1129 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1129 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1187 N M 1990 2 rr : 0 0 0 sco O ; 
+171 1187 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1188 N M 2 59 rr : 0 0 0 sco O ; 
+171 1188 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1188 N M 2 59 rr : 0 0 0 sco O ; 
+171 1188 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 157 1192 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+208 1192 M 
+(\024)S 
+; : 181 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+232 1192 M 
+(\033)S 
+; : 206 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+257 1192 M 
+(\030)S 
+; 
+316 1188 N M 2 59 rr : 0 0 0 sco O ; 
+316 1188 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 1188 N M 2 59 rr : 0 0 0 sco O ; 
+316 1188 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 460 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+511 1192 M 
+(/)S 
+; : 490 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+541 1192 M 
+(L)S 
+; : 504 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+555 1192 M 
+(Q)S 
+; : 531 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+582 1192 M 
+(H)S 
+; : 569 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+620 1192 M 
+(\034)S 
+; : 610 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+661 1192 M 
+(\013)S 
+; : 629 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+680 1192 M 
+(E)S 
+; : 657 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+708 1192 M 
+(R)S 
+; : 681 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+732 1192 M 
+(W)S 
+; : 700 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+751 1192 M 
+(W)S 
+; : 719 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+770 1192 M 
+(R)S 
+; : 744 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+795 1192 M 
+(P)S 
+; : 784 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+835 1192 M 
+(\014)S 
+; 
+1047 1188 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1188 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1047 1188 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1188 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1156 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1207 1192 M 
+(U)S 
+; : 1175 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1226 1192 M 
+(\024)S 
+; : 1199 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1250 1192 M 
+(\026)S 
+; : 1223 1192 153 51 rc 734  VM?
+pagesave restore
+/G20 [38.0 0.0 2.0 7.0 34.0 18.0 ]
+/G20 {
+    32 11 true [1 0 0 -1 -2.0 18.0 ]
+{<~s8W-!
+zzzzzzzzzs8W-!~>} imagemask
+ }
+  32 /G20 MSTT31c1eb00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1223 1192 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1274 1192 M 
+( )S 
+; : 1261 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1312 1192 M 
+(U)S 
+; : 1280 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1331 1192 M 
+(K)S 
+; : 1307 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1358 1192 M 
+(R)S 
+; : 1332 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1383 1192 M 
+(\013)S 
+; : 1351 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1402 1192 M 
+(\025)S 
+; : 1375 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1426 1192 M 
+(\014)S 
+; 
+1603 1188 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1188 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1603 1188 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1188 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1712 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1763 1192 M 
+(U)S 
+; : 1731 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1782 1192 M 
+(\025)S 
+; : 1755 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1806 1192 M 
+(\026)S 
+; : 1779 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1830 1192 M 
+( )S 
+; : 1817 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1868 1192 M 
+(U)S 
+; : 1836 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1887 1192 M 
+(K)S 
+; : 1863 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1914 1192 M 
+(R)S 
+; : 1888 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1939 1192 M 
+(\013)S 
+; : 1907 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1958 1192 M 
+(\025)S 
+; : 1931 1192 153 51 rc 0 0 0 sco F0_50
+Ji 
+1982 1192 M 
+(\014)S 
+; 
+2159 1188 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1188 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 1188 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1188 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1247 N M 1990 2 rr : 0 0 0 sco O ; 
+171 1247 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1248 N M 2 59 rr : 0 0 0 sco O ; 
+171 1248 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1248 N M 2 59 rr : 0 0 0 sco O ; 
+171 1248 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 157 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+208 1252 M 
+(\024)S 
+; : 181 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+232 1252 M 
+(\033)S 
+; : 206 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+257 1252 M 
+(\030)S 
+; 
+316 1248 N M 2 59 rr : 0 0 0 sco O ; 
+316 1248 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 1248 N M 2 59 rr : 0 0 0 sco O ; 
+316 1248 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 460 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+511 1252 M 
+(/)S 
+; : 490 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+541 1252 M 
+(L)S 
+; : 504 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+555 1252 M 
+(Q)S 
+; : 531 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+582 1252 M 
+(H)S 
+; : 569 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+620 1252 M 
+(\033)S 
+; : 610 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+661 1252 M 
+(\013)S 
+; : 629 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+680 1252 M 
+(E)S 
+; : 657 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+708 1252 M 
+(R)S 
+; : 681 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+732 1252 M 
+(W)S 
+; : 700 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+751 1252 M 
+(W)S 
+; : 719 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+770 1252 M 
+(R)S 
+; : 744 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+795 1252 M 
+(P)S 
+; : 784 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+835 1252 M 
+(\014)S 
+; 
+1047 1248 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1248 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1047 1248 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1248 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1156 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1207 1252 M 
+(U)S 
+; : 1175 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1226 1252 M 
+(\025)S 
+; : 1199 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1250 1252 M 
+(\026)S 
+; : 1223 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1274 1252 M 
+( )S 
+; : 1261 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1312 1252 M 
+(U)S 
+; : 1280 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1331 1252 M 
+(K)S 
+; : 1307 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1358 1252 M 
+(R)S 
+; : 1332 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1383 1252 M 
+(\013)S 
+; : 1351 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1402 1252 M 
+(\026)S 
+; : 1375 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1426 1252 M 
+(\014)S 
+; 
+1603 1248 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1248 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1603 1248 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1248 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1712 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1763 1252 M 
+(U)S 
+; : 1731 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1782 1252 M 
+(\024)S 
+; : 1755 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1806 1252 M 
+(\026)S 
+; : 1779 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1830 1252 M 
+( )S 
+; : 1817 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1868 1252 M 
+(U)S 
+; : 1836 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1887 1252 M 
+(K)S 
+; : 1863 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1914 1252 M 
+(R)S 
+; : 1888 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1939 1252 M 
+(\013)S 
+; : 1907 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1958 1252 M 
+(\026)S 
+; : 1931 1252 153 51 rc 0 0 0 sco F0_50
+Ji 
+1982 1252 M 
+(\014)S 
+; 
+2159 1248 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1248 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 1248 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1248 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1307 N M 1990 2 rr : 0 0 0 sco O ; 
+171 1307 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1308 N M 2 59 rr : 0 0 0 sco O ; 
+171 1308 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1308 N M 2 59 rr : 0 0 0 sco O ; 
+171 1308 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 157 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+208 1311 M 
+(\024)S 
+; : 181 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+232 1311 M 
+(\033)S 
+; : 206 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+257 1311 M 
+(\033)S 
+; 
+316 1308 N M 2 59 rr : 0 0 0 sco O ; 
+316 1308 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 1308 N M 2 59 rr : 0 0 0 sco O ; 
+316 1308 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 448 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+499 1311 M 
+(/)S 
+; : 478 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+529 1311 M 
+(L)S 
+; : 492 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+543 1311 M 
+(Q)S 
+; : 519 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+570 1311 M 
+(H)S 
+; : 557 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+608 1311 M 
+(\024)S 
+; : 581 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+632 1311 M 
+(\024)S 
+; : 622 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+673 1311 M 
+(\013)S 
+; : 641 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+692 1311 M 
+(E)S 
+; : 669 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+720 1311 M 
+(R)S 
+; : 694 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+745 1311 M 
+(W)S 
+; : 713 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+764 1311 M 
+(W)S 
+; : 732 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+783 1311 M 
+(R)S 
+; : 756 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+807 1311 M 
+(P)S 
+; : 797 1311 153 51 rc 0 0 0 sco F0_50
+Ji 
+848 1311 M 
+(\014)S 
+; 
+1047 1308 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1308 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1047 1308 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1308 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1041 1314 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1070 1314 M 
+(\010)S 
+; : 1066 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1095 1314 M 
+(U)S 
+; : 1092 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1121 1314 M 
+(K)S 
+; : 1118 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1147 1314 M 
+(R)S 
+; : 1143 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1172 1314 M 
+( )S 
+; : 1169 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1198 1314 M 
+(>)S 
+; : 1194 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1223 1314 M 
+(U)S 
+; : 1220 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1249 1314 M 
+(\024)S 
+; : 1246 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1275 1314 M 
+(\025)S 
+; : 1271 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1300 1314 M 
+(\017)S 
+; : 1323 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1352 1314 M 
+(U)S 
+; : 1348 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1377 1314 M 
+(\024)S 
+; : 1374 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1403 1314 M 
+(\026)S 
+; : 1399 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1428 1314 M 
+(\017)S 
+; : 1451 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1480 1314 M 
+(U)S 
+; : 1476 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1505 1314 M 
+(\025)S 
+; : 1502 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1531 1314 M 
+(\026)S 
+; : 1528 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1557 1314 M 
+(@)S 
+; 
+1603 1308 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1308 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1603 1308 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1308 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1596 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1625 1314 M 
+(\010)S 
+; : 1622 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1651 1314 M 
+(U)S 
+; : 1648 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1677 1314 M 
+(K)S 
+; : 1673 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1702 1314 M 
+(R)S 
+; : 1699 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1728 1314 M 
+( )S 
+; : 1725 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1754 1314 M 
+(>)S 
+; : 1750 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1779 1314 M 
+(U)S 
+; : 1776 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1805 1314 M 
+(\024)S 
+; : 1802 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1831 1314 M 
+(\025)S 
+; : 1827 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1856 1314 M 
+(\017)S 
+; : 1878 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1907 1314 M 
+(U)S 
+; : 1904 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1933 1314 M 
+(\025)S 
+; : 1930 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1959 1314 M 
+(\026)S 
+; : 1955 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+1984 1314 M 
+(\017)S 
+; : 2007 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+2036 1314 M 
+(U)S 
+; : 2032 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+2061 1314 M 
+(\024)S 
+; : 2058 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+2087 1314 M 
+(\026)S 
+; : 2083 1314 87 47 rc 0 0 0 sco F6_50
+Ji 
+2112 1314 M 
+(@)S 
+; 
+2159 1308 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1308 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 1308 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1308 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1367 N M 1990 2 rr : 0 0 0 sco O ; 
+171 1367 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1368 N M 2 59 rr : 0 0 0 sco O ; 
+171 1368 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1368 N M 2 59 rr : 0 0 0 sco O ; 
+171 1368 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 157 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+208 1371 M 
+(\024)S 
+; : 181 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+232 1371 M 
+(\033)S 
+; : 206 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+257 1371 M 
+(\034)S 
+; 
+316 1368 N M 2 59 rr : 0 0 0 sco O ; 
+316 1368 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 1368 N M 2 59 rr : 0 0 0 sco O ; 
+316 1368 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 565 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+616 1371 M 
+(/)S 
+; : 595 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+646 1371 M 
+(L)S 
+; : 609 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+660 1371 M 
+(Q)S 
+; : 636 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+687 1371 M 
+(H)S 
+; : 674 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+725 1371 M 
+(\027)S 
+; 
+1047 1368 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1368 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1047 1368 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1368 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1156 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1207 1371 M 
+(U)S 
+; : 1175 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1226 1371 M 
+(\024)S 
+; : 1199 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1250 1371 M 
+(\026)S 
+; : 1223 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1274 1371 M 
+( )S 
+; : 1261 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1312 1371 M 
+(U)S 
+; : 1280 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1331 1371 M 
+(K)S 
+; : 1307 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1358 1371 M 
+(R)S 
+; : 1332 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1383 1371 M 
+(\013)S 
+; : 1351 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1402 1371 M 
+(\025)S 
+; : 1375 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1426 1371 M 
+(\014)S 
+; 
+1603 1368 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1368 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1603 1368 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1368 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1712 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1763 1371 M 
+(U)S 
+; : 1731 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1782 1371 M 
+(\025)S 
+; : 1755 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1806 1371 M 
+(\026)S 
+; : 1779 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1830 1371 M 
+( )S 
+; : 1817 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1868 1371 M 
+(U)S 
+; : 1836 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1887 1371 M 
+(K)S 
+; : 1863 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1914 1371 M 
+(R)S 
+; : 1888 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1939 1371 M 
+(\013)S 
+; : 1907 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1958 1371 M 
+(\025)S 
+; : 1931 1371 153 51 rc 0 0 0 sco F0_50
+Ji 
+1982 1371 M 
+(\014)S 
+; 
+2159 1368 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1368 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 1368 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1368 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1426 N M 1990 2 rr : 0 0 0 sco O ; 
+171 1426 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1427 N M 2 59 rr : 0 0 0 sco O ; 
+171 1427 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1427 N M 2 59 rr : 0 0 0 sco O ; 
+171 1427 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 157 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+208 1431 M 
+(\024)S 
+; : 181 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+232 1431 M 
+(\033)S 
+; : 206 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+257 1431 M 
+(\034)S 
+; 
+316 1427 N M 2 59 rr : 0 0 0 sco O ; 
+316 1427 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 1427 N M 2 59 rr : 0 0 0 sco O ; 
+316 1427 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 565 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+616 1431 M 
+(/)S 
+; : 595 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+646 1431 M 
+(L)S 
+; : 609 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+660 1431 M 
+(Q)S 
+; : 636 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+687 1431 M 
+(H)S 
+; : 674 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+725 1431 M 
+(\030)S 
+; 
+1047 1427 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1427 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1047 1427 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1427 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1156 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1207 1431 M 
+(U)S 
+; : 1175 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1226 1431 M 
+(\025)S 
+; : 1199 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1250 1431 M 
+(\026)S 
+; : 1223 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1274 1431 M 
+( )S 
+; : 1261 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1312 1431 M 
+(U)S 
+; : 1280 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1331 1431 M 
+(K)S 
+; : 1307 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1358 1431 M 
+(R)S 
+; : 1332 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1383 1431 M 
+(\013)S 
+; : 1351 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1402 1431 M 
+(\026)S 
+; : 1375 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1426 1431 M 
+(\014)S 
+; 
+1603 1427 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1427 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1603 1427 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1427 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1712 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1763 1431 M 
+(U)S 
+; : 1731 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1782 1431 M 
+(\024)S 
+; : 1755 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1806 1431 M 
+(\026)S 
+; : 1779 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1830 1431 M 
+( )S 
+; : 1817 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1868 1431 M 
+(U)S 
+; : 1836 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1887 1431 M 
+(K)S 
+; : 1863 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1914 1431 M 
+(R)S 
+; : 1888 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1939 1431 M 
+(\013)S 
+; : 1907 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1958 1431 M 
+(\026)S 
+; : 1931 1431 153 51 rc 0 0 0 sco F0_50
+Ji 
+1982 1431 M 
+(\014)S 
+; 
+2159 1427 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1427 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 1427 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1427 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1486 N M 1990 2 rr : 0 0 0 sco O ; 
+171 1486 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1487 N M 2 59 rr : 0 0 0 sco O ; 
+171 1487 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1487 N M 2 59 rr : 0 0 0 sco O ; 
+171 1487 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 157 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+208 1491 M 
+(\024)S 
+; : 181 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+232 1491 M 
+(\033)S 
+; : 206 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+257 1491 M 
+(\034)S 
+; 
+316 1487 N M 2 59 rr : 0 0 0 sco O ; 
+316 1487 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+316 1487 N M 2 59 rr : 0 0 0 sco O ; 
+316 1487 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 565 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+616 1491 M 
+(/)S 
+; : 595 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+646 1491 M 
+(L)S 
+; : 609 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+660 1491 M 
+(Q)S 
+; : 636 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+687 1491 M 
+(H)S 
+; : 674 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+725 1491 M 
+(\031)S 
+; 
+1047 1487 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1487 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+1047 1487 N M 2 59 rr : 0 0 0 sco O ; 
+1047 1487 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1233 1494 87 47 rc 338  VM?
+pagesave restore
+/G49 [26.0 0.0 2.0 0.0 21.0 31.0 ]
+/G49 {
+    19 31 true [1 0 0 -1 -2.0 31.0 ]
+{<~!"ZjF
+5MuPAhuN<*!T;l:^]4DN!!0k8!Pe^8s1n[7_#OGM!Pe[9^]4DN!!0k8!Pe[9
+^]4DN!!0k8!Pe[9^]4DN!!0k8!Pe[9^]4DN!!0k8s8RWLs+(.LJ,~>} imagemask
+ }
+  73 /G49 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 1233 1494 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1262 1494 M 
+(I)S 
+; : 1259 1494 87 47 rc 0 0 0 sco F6_50
+Ji 
+1288 1494 M 
+(\024)S 
+; : 1284 1494 87 47 rc 0 0 0 sco F6_50
+Ji 
+1313 1494 M 
+( )S 
+; : 1310 1494 87 47 rc 338  VM?
+pagesave restore
+/G11 [26.0 0.0 10.0 0.0 16.0 6.0 ]
+/G11 {
+    6 6 true [1 0 0 -1 -10.0 6.0 ]
+{<~Gl7L;
+r-/~>} imagemask
+ }
+  17 /G11 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1310 1494 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1339 1494 M 
+(\021)S 
+; : 1335 1494 87 47 rc 0 0 0 sco F6_50
+Ji 
+1364 1494 M 
+(\021)S 
+; : 1361 1494 87 47 rc 0 0 0 sco F6_50
+Ji 
+1390 1494 M 
+(\021)S 
+; 
+1603 1487 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1487 N M 2 59 rr : 0 0 0 sco O ; 1 Lw 0 Lc 0 Lj solid 0 0 0 sco K 
+1603 1487 N M 2 59 rr : 0 0 0 sco O ; 
+1603 1487 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K : 1691 1491 153 51 rc 0 0 0 sco (F0_50) cvn
+F0
+50 
+xF 
+F0_50
+Ji 
+1742 1491 M 
+(V)S 
+; : 1710 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+1761 1491 M 
+(H)S 
+; : 1732 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+1783 1491 M 
+(H)S 
+; : 1770 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+1821 1491 M 
+(\013)S 
+; : 1789 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+1840 1491 M 
+(\024)S 
+; : 1813 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+1864 1491 M 
+(\014)S 
+; : 1849 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+1900 1491 M 
+(E)S 
+; : 1877 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+1928 1491 M 
+(H)S 
+; : 1899 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+1950 1491 M 
+(O)S 
+; : 1912 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+1963 1491 M 
+(R)S 
+; : 1935 1491 153 51 rc 0 0 0 sco F0_50
+Ji 
+1986 1491 M 
+(Z)S 
+; 
+2159 1487 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1487 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+2159 1487 N M 2 59 rr : 0 0 0 sco O ; 
+2159 1487 N M 2 59 rr : 0 0 0 sco O ; 0 0 0 sco K 
+171 1546 N M 1990 2 rr : 0 0 0 sco O ; 
+171 1546 N M 1990 2 rr : 0 0 0 sco O ; 0 0 0 sco K : 170 1616 153 51 rc 0 0 0 sco F0_50
+Ji 
+221 1616 M 
+(\013)S 
+; : 189 1616 153 51 rc 0 0 0 sco F0_50
+Ji 
+240 1616 M 
+(\024)S 
+; : 213 1616 153 51 rc 0 0 0 sco F0_50
+Ji 
+264 1616 M 
+(\014)S 
+; : 296 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+325 1619 M 
+(I)S 
+; : 322 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+351 1619 M 
+(\024)S 
+; : 347 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+376 1619 M 
+( )S 
+; : 373 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+402 1619 M 
+(\024)S 
+; : 399 1619 87 47 rc 338  VM?
+pagesave restore
+/G12 [26.0 0.0 3.0 -4.0 23.0 35.0 ]
+/G12 {
+    20 39 true [1 0 0 -1 -3.0 35.0 ]
+{<~!!$C,
+!,qo<n,NIH!!(pW!Pe[9^]4Ie!!@`O#64`/!!!N0!"Ju/*WQ0[!!#+]!&srY
+GQ7__!!)Kg!8mhWhuEen!!0k8"+U@RJ,ffS!!`K(%fcS>!!"&?!#tt=49,@@
+!!%6D!,qo<n,NIH!!(pW!!~>} imagemask
+ }
+  18 /G12 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lw 0 Lc 0 Lj solid 399 1619 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+428 1619 M 
+(\022)S 
+; : 424 1619 87 47 rc 338  VM?
+pagesave restore
+/G0B [26.0 0.0 8.0 -4.0 20.0 35.0 ]
+/G0B {
+    12 39 true [1 0 0 -1 -8.0 35.0 ]
+{<~!&+EB
+!Up3,#Cm<b%KIOM)uqqu2ummtDuahWn,VAHhuM[8huM[8huM[8huM[8DuahW
+DuahW2uko<)uq#[%KI">#Clol!Up*Y!&+~>} imagemask
+ }
+  11 /G0B MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 424 1619 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+453 1619 M 
+(\013)S 
+; : 450 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+479 1619 M 
+(\024)S 
+; : 475 1619 87 47 rc 338  VM?
+pagesave restore
+/G0E [26.0 0.0 2.0 4.0 23.0 26.0 ]
+/G0E {
+    21 22 true [1 0 0 -1 -2.0 26.0 ]
+{<~!,qo<
+Du]lW!!$s<!,qo<Du]lW!!$s<!,qr<s7lWoq#CBh!,qo<Du]lW!!$s<!,qo<
+Du]lW!!$s<!,qo<Du]~>} imagemask
+ }
+  14 /G0E MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 475 1619 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+504 1619 M 
+(\016)S 
+; : 501 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+530 1619 M 
+(\025)S 
+; : 527 1619 87 47 rc 338  VM?
+pagesave restore
+/G0D [26.0 0.0 3.0 4.0 22.0 26.0 ]
+/G0D {
+    19 22 true [1 0 0 -1 -3.0 26.0 ]
+{<~!8mhW
+huEc8!!(pW!8mk8iSaLoi-t^A5Q:]oqu?ig!!i9!+8u7is+(%1i:,^`5iBEX
+huEc8!!(pW!8mhWhuE~>} imagemask
+ }
+  13 /G0D MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 527 1619 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+556 1619 M 
+(\015)S 
+; : 552 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+581 1619 M 
+(U)S 
+; : 578 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+607 1619 M 
+(\024)S 
+; : 604 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+633 1619 M 
+(\025)S 
+; : 629 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+658 1619 M 
+(\015)S 
+; : 655 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+684 1619 M 
+(U)S 
+; : 681 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+710 1619 M 
+(\025)S 
+; : 706 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+735 1619 M 
+(\026)S 
+; : 732 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+761 1619 M 
+(\015)S 
+; : 757 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+786 1619 M 
+(U)S 
+; : 783 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+812 1619 M 
+(\024)S 
+; : 809 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+838 1619 M 
+(\026)S 
+; : 834 1619 87 47 rc 338  VM?
+pagesave restore
+/G10 [26.0 0.0 3.0 14.0 23.0 17.0 ]
+/G10 {
+    20 3 true [1 0 0 -1 -3.0 17.0 ]
+{<~s8VTg
+s7$'gn,~>} imagemask
+ }
+  16 /G10 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 834 1619 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+863 1619 M 
+(\020)S 
+; : 860 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+889 1619 M 
+(U)S 
+; : 886 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+915 1619 M 
+(\024)S 
+; : 911 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+940 1619 M 
+(\025)S 
+; : 937 1619 87 47 rc 338  VM?
+pagesave restore
+/G41 [26.0 0.0 5.0 24.0 21.0 31.0 ]
+/G41 {
+    16 7 true [1 0 0 -1 -5.0 31.0 ]
+{<~!rrSA
++7MMmr-n,Wi!'~>} imagemask
+ }
+  65 /G41 MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 937 1619 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+966 1619 M 
+(A)S 
+; : 962 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+991 1619 M 
+(\025)S 
+; : 988 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1017 1619 M 
+(\020)S 
+; : 1014 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1043 1619 M 
+(U)S 
+; : 1039 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1068 1619 M 
+(\025)S 
+; : 1065 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1094 1619 M 
+(\026)S 
+; : 1091 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1120 1619 M 
+(A)S 
+; : 1116 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1145 1619 M 
+(\025)S 
+; : 1142 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1171 1619 M 
+(\020)S 
+; : 1168 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1197 1619 M 
+(U)S 
+; : 1193 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1222 1619 M 
+(\024)S 
+; : 1219 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1248 1619 M 
+(\026)S 
+; : 1244 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1273 1619 M 
+(A)S 
+; : 1270 1619 87 47 rc 0 0 0 sco F6_50
+Ji 
+1299 1619 M 
+(\025)S 
+; : 1296 1619 87 47 rc 338  VM?
+pagesave restore
+/G0C [26.0 0.0 4.0 -4.0 17.0 35.0 ]
+/G0C {
+    13 39 true [1 0 0 -1 -4.0 35.0 ]
+{<~?i]s%
+HiP2f%fch7"+UKh!Pe]n!8mkH!,qpW!,qot!&ss<!&ss<!&ss<!&ss<!,qpW
+!,qr-!8mk8!PefQ#Cm$Z%fecnHiWX9?iU~>} imagemask
+ }
+  12 /G0C MSTT31c2b100 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1296 1619 87 47 rc 0 0 0 sco (F6_50) cvn
+F6
+50 
+xF 
+F6_50
+Ji 
+1325 1619 M 
+(\014)S 
+; : 1170 2879 123 39 rc pagesave restore
+%%BeginFont: MSTT31c2bc00
+27000  VM?
+/MSTT31c2bc00 [38.0 0 0 0 0 0] [-38.0 -38.0 38.0 38.0 ] [1 38 div 0 0 1 38 div 0 0] /MSTT31c2bc00 GreNewFont
+%%EndFont
+(F7) cvn
+0.763 
+ (cmr9) cvn /TrueType 
+F 
+(MSTT31c2bc00) cvn
+mF 
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1170 2879 123 39 rc 1123  VM?
+pagesave restore
+/G14 [20.0 0.0 3.0 0.0 16.0 26.0 ]
+/G14 {
+    13 26 true [1 0 0 -1 -3.0 26.0 ]
+{<~!rrQ+
+*ru$8#64u/#64u/#64u/#64u/#64u/#64u/#64u/#64u/#64u/#64u/#6=f!
+~>} imagemask
+ }
+  20 /G14 MSTT31c2bc00 AddChar
+userdict begin /pagesave save def end mysetup concat colspRefresh 
+: 0 0 0 sco 1 Lc 1 Lj solid 1170 2879 123 39 rc 0 0 0 sco (F7_38) cvn
+F7
+38 
+xF 
+F7_38
+Ji 
+1211 2879 M 
+(\024)S 
+; 
+LH 
+pagesave restore
+
+(%%[ Page: 1 ]%%)  =
+%%PageTrailer
+
+%%Trailer
+%%DocumentNeededFonts: 
+%%DocumentSuppliedFonts: cmr12
+%%+ cmcsc10
+%%+ cmex10
+%%+ cmmi12
+%%+ cmr8
+%%+ cmsy10
+%%+ cmtt12
+%%+ cmr9
+Pscript_Win_Driver_Incr dup /terminate get exec
+savelevel0 restore 
+%%Pages: 1
+(%%[ LastPage ]%%)  =
+%%EOF
+%-12345X@PJL EOJ
+%-12345X
