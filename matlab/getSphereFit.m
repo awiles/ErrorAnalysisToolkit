@@ -1,4 +1,5 @@
 function [p,r] = getSphereFit(X)
+% this will fit a sphere to a point cloud.
 
 [p1, r1] = getApproxSphereFit(X);
 
