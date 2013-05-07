@@ -1,34 +1,22 @@
-function [RMS, SigmaCov, SigmaCovPA] = calcTRE(FLE, mrkP, fignumber)
+function [RMS, SigmaCov, SigmaCovPA] = calcTRE(FLE, mrkP, varargin)
 %#eml
 %**************************************************************************
 % Determine Target Registration Error
 %
 %       Written by Andrew Wiles, March 18, 2005
 %           - July 25, 2005, bug in distance from tip to principal axis fixed.
-%           - May 23, 2007, changed to calcTRE and the original calcTRE was
-%             renamed to be calcTRE.old.m
+%           - May 23, 2007, changed to calcTRE and includes anisotropic
+%           forms.
 %           - March 18, 2008, added non-homogenous FLE models.
 %
 %**************************************************************************
 %   The formula implemented here is based on the result provided by
 %   Fitzpatrick et al., "Predicting Error in Rigid-Body Point-Base
 %   Registration", IEEE Trans. on Medical Imaging, Vol. 17, No. 5, October
-%   1998.  The actual formula is based on the special case provided by West
-%   et al., "Designing Optically Tracked Instruments for Image-Guided
-%   Surgery", IEEE Trans. on Medical Imaging, Vol. 23, No. 5, May 2004.
-%
-%   TRE is determined from the formula:
-%           TRE^2 = FLE^2/N*(1 + 1/3 * (sum(k=1:3) d_k^2/f_k^2) )
-%               where
-%                   FLE is the fiducial localizer error
-%                   N   is the number of markers
-%                   d_k is the distance of the tip from the kth principal
-%                       axis.*
-%                   f_k is the rms distance of the markers from the kth
-%                       principal axis.
-%                       * note that principal axis is assumed to be the
-%                       coordinate frame of the rigid body centered at the
-%                       demeaned location of the markers.
+%   1998.  The anisotropic form is based on the formula in Wiles et al.,
+%   "A Statistical Model for Point-Based Target Registration Error With
+%   Anisotropic Fiducial Localizer Error", IEEE Trans. on Medical Imaging,
+%   Vol. 28, No. 3, March 2008.
 %
 %   INPUTS
 %           FLE     the given fiducial localizer error
@@ -36,8 +24,50 @@ function [RMS, SigmaCov, SigmaCovPA] = calcTRE(FLE, mrkP, fignumber)
 %                   will be assumed to be the tip location.
 %**************************************************************************
 
+%% set-up variable arguments.
+
+% defaults:
+fignumber = 0;
+useIsoMethod = 0;
+verbose = 0;
+
+% check the number of arguments
+if( nargin > 2)
+    nVarArgs = length(varargin);
+    i = 1;
+    while( i <= nVarArgs)
+        if( strcmp(varargin{i},'FigNum'))
+            i=i+1;
+            fignumber = varargin{i};
+        elseif( strcmp(varargin{i}, 'Isotropic') || strcmp(varargin{i}, 'Fitzpatrick') )
+            useIsoMethod = 1;
+        elseif( strcmp(varargin{i}, 'Verbose'))
+            verbose = 1;
+        else
+            error('Unknown parameter: %s', varargin{i})
+        end
+        i=i+1;
+    end
+end
+
 %% check the FLE input and set up the error tensor.
-if( ndims(FLE) == 2 )
+
+% if non-homogenous matrix.
+if( ndims(FLE) == 3 )
+    sigmaG = FLE;
+    bHomogenous = 0;
+    if(verbose)
+        sigmaGSize = size(sigmaG);
+        mrkPSize = size(mrkP);
+        fprintf('Non-Homogenous FLE detected: \n');
+        fprintf('    Cov. Matrix Size:   %d x %d x %d \n', sigmaGSize);
+        fprintf('    Marker Matrix Size: %d x %d\n', mrkPSize);
+    end
+    if( size(sigmaG, 3) ~= (size(mrkP,1)-1) ) % subtract one because the target is on the bottom.
+        error('Inhomogenous FLE matrix does not have the same number of covariance matrices as there are markers.\n');
+    end
+    % if homogenous.
+elseif( ismatrix(FLE) )
     if( (max(size(FLE)) == 1) && (min(size(FLE)) == 1) )
         sigmaG = (FLE^2)/3 * eye(3);    %FLE converted to equal variances.
     elseif( (max(size(FLE)) == 3) && (min(size(FLE)) == 1) )
@@ -48,17 +78,12 @@ if( ndims(FLE) == 2 )
         error('FLE matrix is incorrect size\n');
     end
     bHomogenous = 1;
-    %fprintf('Homogenous FLE detected.\n'); %sigmaG
-elseif( ndims(FLE) == 3 )
-    sigmaG = FLE;
-    bHomogenous = 0;
-    %fprintf('Non-Homogenous FLE detected.\n'); %sigmaG
-    %sigmaGSize = size(sigmaG)
-    %mrkPSize = size(mrkP)
-    if( size(sigmaG, 3) ~= (size(mrkP,1)-1) ) % subtract one because the target is on the bottom.
-        error('Inhomogenous FLE matrix does not have the same number of covariance matrices as there are markers.\n');
+    
+    if( verbose )
+        fprintf('Homogenous FLE detected.\n'); %sigmaG
     end
 end
+
 
 %% set up the fiducial markers and tip locations.
 % extract the fiducials
@@ -94,11 +119,17 @@ end
 %% TODO: insert code to print out covariance matrices.
 
 %% compute the TRE.
-
-if( bHomogenous )
+if( useIsoMethod )  
+    %% use Fitzpatrick/West's optimized method.
+    FLE = sqrt(trace(sigmaG));
+    RMS = calcTREFitz(FLE, mrkP);
+    SigmaCov = (RMS^2)/3 * eye(3);    
+elseif( bHomogenous )
+    %% compute the homogenous anisotropic form.    
+    
     %calculate the RMS^2 using the three terms.
     term1 = 1/N*trace(sigma);
-
+    
     term2 = 0;
     for i = 1:3
         for j = 1:3
@@ -108,7 +139,7 @@ if( bHomogenous )
             end
         end
     end
-
+    
     term3 = 0;
     for i = 1:3
         for j = 1:3
@@ -120,11 +151,11 @@ if( bHomogenous )
             end
         end
     end
-
+    
     RMS2 = term1 + term2 + term3;
-
+    
     RMS = sqrt(RMS2);
-
+    
     % calculate the covariance matrix.
     SigmaCov = zeros(3);
     for i = 1:3
@@ -146,21 +177,22 @@ if( bHomogenous )
             SigmaCov(i,j) = SigmaCov(i,j) + rotTerm;
         end
     end
-
-else %non-homogenous FLE.
-    %[U0 L0 V0] = svd(x,0);
+    
+else
+    %%non-homogenous anisotropic form.
+    
     U0 = U;
     L0 = L;
     V0 = eye(3);
     Lambda0 = diag(L0);
     % get the lambda squared values
     Lambda02 = (Lambda0).^2;
-
+    
     %RMS first.
     term1 = 0;
     term2 = 0;
     term3 = 0;
-
+    
     %term 1
     for a = 1:N
         for i = 1:3
@@ -168,7 +200,7 @@ else %non-homogenous FLE.
         end
     end
     term1 = term1;
-
+    
     %term 2
     for a = 1:N
         for i = 1:3
@@ -182,7 +214,7 @@ else %non-homogenous FLE.
         end
     end
     term2 = term2;
-
+    
     %term 3
     for a = 1:N
         for i = 1:3
@@ -199,16 +231,16 @@ else %non-homogenous FLE.
             end
         end
     end
-
+    
     % add them up and take the sqrt.
     %     term1
     %     term2
     %     term3
     RMS2 = (1/N^2)*term1 + (2/N)*term2 + term3;
     RMS = sqrt(RMS2);
-
+    
     % calculate the covariance matrix.
-    sigma;
+    %sigma;
     SigmaCov = zeros(3);
     for i = 1:3
         for j = 1:3
@@ -235,14 +267,17 @@ else %non-homogenous FLE.
                     if( k ~= j)
                         term2b = term2b + tip(k)*(Lambda0(k)*U0(a,k)*sigma(j,i,a) - Lambda0(j)*U0(a,j)*sigma(k,i,a))...
                             /(Lambda02(k) + Lambda02(j));
-
+                        
                     end
                 end
             end
+            % debug:
             %term1
             %term2a
             %term2b
             %term3
+            
+            % add up the terms.
             SigmaCov(i,j) = term1/(N^2) + (1/N)*(term2a + term2b) + term3;
         end
     end
@@ -261,7 +296,7 @@ rho(1) = SigmaCov(1,2)/(sqrt(SigmaCov(1,1))*(sqrt(SigmaCov(2,2))));
 rho(2) = SigmaCov(2,3)/(sqrt(SigmaCov(2,2))*(sqrt(SigmaCov(3,3))));
 rho(3) = SigmaCov(1,3)/(sqrt(SigmaCov(1,1))*(sqrt(SigmaCov(3,3))));
 %if( sum(diag(SigmaCov) < 0) > 0 )
-if (min(diag(SigmaCov))<=0) 
+if (min(diag(SigmaCov))<=0)
     warning('calcTRE::diagaonals on TRE covariance matrix are negative.');
     fprintf('  SigmaCov   = |% 2.2f  % 2.2f  % 2.2f|\n', SigmaCov(1,:));
     fprintf('               |% 2.2f  % 2.2f  % 2.2f|\n', SigmaCov(2,:));
@@ -275,31 +310,23 @@ if (abs(max(rho)) > 1)
     fprintf('rho = %2.2f, %2.2f, %2.2f\n', rho);
 end
 
-
-
 %% plot if necessary.
-if(nargin > 2)
-    if(fignumber > 0)
-        figure(fignumber);
-    else
-        return;
-    end
-else
-    figure(1);
+if(fignumber > 0)
+    figure(fignumber);
+    plot3(x0(:,2), x0(:,3), x0(:,1), 'o');
+    hold on;
+    patch(x0(:,2), x0(:,3), x0(:,1), 0);
+    plot3(tip0(2),tip0(3),tip0(1), 'x');
+    line([mean(x0(:,2)),tip0(2)],[mean(x0(:,3)),tip0(3)],[mean(x0(:,1)),tip0(1)]);
+    [xs, ys, zs] = ellipsoid(tip0(2), tip0(3), tip0(1), RMS, RMS, RMS, 100);
+    surf(xs,ys,zs);
+    hold off;
+    titlestring = sprintf('Probe Rigid Body with Tip Error, TRE = %3.2f', RMS);
+    title(titlestring);
+    xlabel('Y');
+    ylabel('Z');
+    zlabel('X');
+    set(gca,'YDir','reverse');
+    set(gca,'ZDir','reverse');
+    axis equal;
 end
-plot3(x0(:,2), x0(:,3), x0(:,1), 'o');
-hold on;
-patch(x0(:,2), x0(:,3), x0(:,1), 0);
-plot3(tip0(2),tip0(3),tip0(1), 'x');
-line([mean(x0(:,2)),tip0(2)],[mean(x0(:,3)),tip0(3)],[mean(x0(:,1)),tip0(1)]);
-[xs, ys, zs] = ellipsoid(tip0(2), tip0(3), tip0(1), RMS, RMS, RMS, 100);
-surf(xs,ys,zs);
-hold off;
-titlestring = sprintf('Probe Rigid Body with Tip Error, TRE = %3.2f', RMS);
-title(titlestring);
-xlabel('Y');
-ylabel('Z');
-zlabel('X');
-set(gca,'YDir','reverse');
-set(gca,'ZDir','reverse');
-axis equal;
