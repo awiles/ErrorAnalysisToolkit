@@ -1,6 +1,6 @@
 function [probeTipError, probeTipMeas, refTipError, refTipMeas,...
     combinedTipError, combinedTipMeas]...
-    = simTRE(Sigma, N, probeRig, probeTrue, refRig, refTrue)
+    = simTRE(Sigma, N, probeRig, probeTrue, refRig, refTrue, varargin)
 
 %**************************************************************************
 % Simulate the Target Registration Error using Monte Carlo
@@ -16,14 +16,16 @@ regMethod = 'IsotropicSVD';
 verbose = 0;
 bWeight = 0;
 
-if(nargin > 0)
+if(nargin > 6)
     nVarArgs = length(varargin);
     i = 1;
     while( i <= nVarArgs)
         if( strcmp(varargin{i},'RegistrationMethod'))
             i=i+1;
             regMethod = varargin{i};
-            if( strcmp(regMethod, 'AnisotropicIterative')
+            if( strcmp(regMethod, 'IsotropicSVD') )
+                bWeight = 0;
+            elseif( strcmp(regMethod, 'AnisotropicIterative') )
                 bWeight = 1;
             end
         elseif( strcmp(varargin{i}, 'Verbose'))
@@ -37,7 +39,7 @@ end
 % check whether the FLE model is homogenous or not.
 if( ndims(Sigma) == 3 )
     bHomogenous = 0;
-elseif( ndims(Sigma) == 2)
+elseif( ismatrix(Sigma))
     bHomogenous = 1;
 else
     error('The FLE matrix has incorrect dimensions.');
