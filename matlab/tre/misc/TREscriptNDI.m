@@ -47,16 +47,16 @@ zpos = [-100:5:100]';
 % FIRST, calculate for local z-axis.
 tip = repmat(tip0',size(zpos,1),1) + [zeros(size(zpos)) zeros(size(zpos)) zpos];
 for i = 1:size(tip,1)
-    TRE_z(i) = calcTRE_NDI(FLE,[x;tip(i,:)],0);
+    TRE_z(i) = calcTRE(FLE,[x;tip(i,:)]);
 end
-TRE_z0 = calcTRE_NDI(FLE,[x;tip0'],0);
+TRE_z0 = calcTRE(FLE,[x;tip0']);
 
 % SECOND, calculate for global z-axis.
 tipG = repmat(tip0',size(zpos,1),1) + (R'*[zeros(size(zpos)) zeros(size(zpos)) zpos]')';
 for i = 1:size(tip,1)
-    TRE_zG(i) = calcTRE_NDI(FLE,[x;tipG(i,:)],0);
+    TRE_zG(i) = calcTRE(FLE,[x;tipG(i,:)]);
 end
-TRE_z0 = calcTRE_NDI(FLE,[x;tip0'],0);
+TRE_z0 = calcTRE(FLE,[x;tip0']);
 
 figure(1);
 plot(tip(:,3),TRE_z);
@@ -76,7 +76,7 @@ legend('TRE local Z-axis','TRE global Z-axis','Specific Case in Drawing',0);
 % rotated about the y-axis.
 
 radius = 100;                         %distance from origin                  
-alpha = deg2rad([0:1:360]');     %angle about origin
+alpha = (pi/180)*([0:1:360]');     %angle about origin
 
 % define tip positions on the unit circle and then set the radius.
 tip_xy = radius * [ cos(alpha) sin(alpha) zeros(size(alpha)) ];
@@ -85,9 +85,9 @@ tip_yz = radius * [ zeros(size(alpha)) cos(alpha) sin(alpha) ];
 
 % cycle through and determine TRE for each case.
 for i = 1:size(tip_xy,1)
-    TRE_xy(i) = calcTRE_NDI(FLE,[x;tip_xy(i,:)],0);
-    TRE_xz(i) = calcTRE_NDI(FLE,[x;tip_xz(i,:)],0);
-    TRE_yz(i) = calcTRE_NDI(FLE,[x;tip_yz(i,:)],0);
+    TRE_xy(i) = calcTRE(FLE,[x;tip_xy(i,:)]);
+    TRE_xz(i) = calcTRE(FLE,[x;tip_xz(i,:)]);
+    TRE_yz(i) = calcTRE(FLE,[x;tip_yz(i,:)]);
 end
 
 % plot results.
@@ -120,7 +120,7 @@ tip_dist = [(distance .* repmat(dirVec(1), size(distance,1),1)),...
 
 % cycle through and determine TRE for each case.
 for i = 1:size(tip_dist,1)
-    TRE_dist(i) = calcTRE_NDI(FLE,[x;tip_dist(i,:)],0);    
+    TRE_dist(i) = calcTRE(FLE,[x;tip_dist(i,:)]);    
 end
 
 % plot.
