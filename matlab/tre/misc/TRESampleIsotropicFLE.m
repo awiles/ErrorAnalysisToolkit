@@ -74,7 +74,7 @@ legend('TRE local Z-axis','TRE global Z-axis','Specific Case in Drawing',0);
 % rotated about the y-axis.
 
 radius = 100;                         %distance from origin                  
-alpha = deg2rad([0:1:360]');     %angle about origin
+alpha = (pi/180)*([0:1:360]');     %angle about origin
 
 % define tip positions on the unit circle and then set the radius.
 tip_xy = radius * [ cos(alpha) sin(alpha) zeros(size(alpha)) ];
