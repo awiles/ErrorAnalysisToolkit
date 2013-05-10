@@ -1,4 +1,4 @@
-function [fremean frecov frewin] = updateFREStats(newfre, fremean, frecov, frewin)
+function [fremean, frecov, frewin] = updateFREStats(newfre, fremean, frecov, frewin)
 % Written by Andrew D. Wiles, 2009-12-03.
 %
 % Here we update the FRE statistics for a single marker.
