@@ -1,5 +1,5 @@
 function [probe,rmsDiff] = runRandFiducialTargetExperiment(nSamples, nBodies, nTrials, nOrientations, nPositions,...
-    nMarkers, Sigma, mrkRange, targetRange)
+    nMarkers, Sigma, mrkRange, targetRange, varargin)
 % [probe,rmsDiff] = runRandFiducialTargetExperiment(nSamples, nTrials,...
 %                       nOrientations, nPositions, nMarkers, Sigma, mrkRange, targetRange)
 %
@@ -21,7 +21,33 @@ function [probe,rmsDiff] = runRandFiducialTargetExperiment(nSamples, nBodies, nT
 %       targetRange - distance over which the target will appear.  The
 %                       origin is assumed to bisect this range.
 
-email_setup;
+% defaults for optional arguments.
+smtp_server = '';
+email_address = '';
+bEmail = 0;
+
+if( nargin > 8 )
+    nVarArgs = length(varargin);
+    i = 1;
+    while( i <= nVarArgs )
+        if( strcmp(varargin{i}, 'smtp') )
+            i=i+1;
+            smtp_server = varargin{i};
+        elseif (strcomp(varargin{i}, 'email'))
+            i=i+1;
+            email_address = varargin{i};
+        elseif( strcmp(varargin{i}, 'Verbose'))
+            verbose = 1;
+        else
+            error('Unknown paramter: %s', varargin{i});
+        end
+    end
+end
+
+if( ~isempty(smtp_server) && ~isempty(email_address))
+    email_setup('smtp.me.com', 'awiles@me.com');
+    bEMail = 1;
+end
 
 nCount=0;
 nTotalCount = nBodies*nTrials*nOrientations*nPositions;
@@ -71,8 +97,6 @@ for i=1:nBodies
     %     probe.Rigid.tip = [ -rho 0 0 ];
     % ENDDEBUG
 
-
-
     for j=1:nTrials
         for k=1:nOrientations
             %******************Get the Random Orientation *******%
@@ -94,7 +118,7 @@ for i=1:nBodies
                 %**************Compute the theoretical statistics.*******%
                 probe.Actual.stats.mu = zeros(1,3);
                 [probe.Actual.stats.RMS, probe.Actual.stats.Sigma, probe.Actual.stats.SigmaPA] =...
-                    calcTRE(Sigma, [probe.Actual.mrk; probe.Actual.tip], 0);
+                    calcTRE(Sigma, [probe.Actual.mrk; probe.Actual.tip]);
                 probe.Fitz.stats.RMS = calcTRE(sqrt(trace(Sigma)), [probe.Actual.mrk; probe.Actual.tip]);
 
                 %*******************Monte Carlo trial.**********%
@@ -158,7 +182,10 @@ msg = sprintf(['TRE Simulation Complete.\n    '...
     'Test ID: %s\n\n    See attachment for details.'],...
     starttime(1:5), endtime(1:5), datetime);
 
-%sendmail('awiles@imaging.robarts.ca', 'TRE Simulation Complete', msg, {'readme.txt','data.csv'});
+if( bEmail)
+    sendmail(email_address, 'TRE Simulation Complete', msg, {'readme.txt','data.csv'});
+end
+
 fclose('all');
 cd ..
 plotRandFiducialTargetExperiment(datetime,'Homogenous', 18);
