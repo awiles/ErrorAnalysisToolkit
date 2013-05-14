@@ -73,6 +73,8 @@ function masterTRESimulations(varargin)
 %                           - default: 0.1
 %       'NH_FLEWeight'  FLE relative weights for each axis. Still assuming indepenent axis values.
 %                           - default: [1 1 3]
+%       'NH_FLERange'   Maximum range of axis FLE variances for random errors used in model types 2 7 3.
+%                           - default: 2
 %**************************************************************************
 
 %% defaults.
@@ -118,6 +120,7 @@ fleparms.origin = [0 0 0];  %origin of sphere.
 fleparms.rate = 0.002;      %rate of increase from origin in mmRMS/mm
 fleparms.baseline = 0.1;    %RMS at origin.
 fleparms.weight = [1 1 3];  %relative weights for each axis. Still assuming indepenent axis values.
+fleparms.range = 2;         % maximum value of the random errors that can occur on each axis.
 
 %% get the variable arguments if any:
 if( nargin > 0 )
@@ -218,6 +221,9 @@ if( nargin > 0 )
         elseif( strcmp(varargin{i}, 'NH_FLEWeight') )
             i = i+1;
             fleparms.weight = varargin{i};
+        elseif( strcmp(varargin{i}, 'NH_FLERange') )
+            i = i+1;
+            fleparms.range = varargin{i};
         else
             error('Unknown parameter: %s', varargin{i})
         end
