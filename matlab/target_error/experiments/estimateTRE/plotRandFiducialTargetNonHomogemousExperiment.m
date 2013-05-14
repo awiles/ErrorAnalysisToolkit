@@ -1,5 +1,8 @@
 function plotRandFiducialTargetNonHomogemousExperiment(testname, datetime, fleModel, figFontSize)
 
+cd(testname)
+cd(datetime)
+
 data = csvread('data.csv');
 id = 1;
 covonly = 2;
@@ -45,7 +48,7 @@ copyfile('PredvMeas*.png', '..\' );
 nTotalCount = parm.nBodies*parm.nTrials*parm.nOrientations*parm.nPositions;
 %histbins = 0.01:0.01:1
 
-for i = 1:5 % only plot the histograms for the first 5 tests.
+for i = 1:nTotalCount % only plot the histograms for the first 5 tests.
     filename = sprintf('data%06d.mat', i);
     fprintf('Plotting for %s ...\n', filename);
     load(filename);
@@ -79,3 +82,5 @@ for i = 1:5 % only plot the histograms for the first 5 tests.
     %print('-depsc', '-tiff', '-r300', figurefilename);
     print('-dpng', '-r600', figurefilename);
 end
+
+cd ../..

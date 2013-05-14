@@ -1,6 +1,7 @@
-function plotRandFiducialTargetExperiment(testname, fleModel, figFontSize)
+function plotRandFiducialTargetExperiment(testname, datetime, fleModel, figFontSize)
 
 cd(testname)
+cd(datetime)
 
 data = csvread('data.csv');
 id = 1;
@@ -31,7 +32,8 @@ title({titlestring, subtitlestring}, 'fontsize',figFontSize);
 
 axis([minRMS, maxRMS, minRMS, maxRMS]);
 figurefilename = sprintf('PredvMeas_%s', parm.name);
-print('-depsc', '-tiff', '-r300', figurefilename);
+%print('-depsc', '-tiff', '-r300', figurefilename);
+print('-dpng', '-r300', figurefilename);
 
 %copyfile('*.eps', 'E:\awiles\data\tretest\IEEE_Data\RandDesigns' );
 
@@ -74,4 +76,4 @@ for i = 1:nTotalCount
     print('-dpng', '-r300', figurefilename);
 end
 
-cd ..
+cd ../..

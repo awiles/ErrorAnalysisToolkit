@@ -344,7 +344,7 @@ if(bRandFiducialNH)
             if(nCount > nDone)
                 runRandFiducialTargetNonHomogenousExperiment...
                     (nSamples, nBodies, nTrials, nOrientations, nPositions,...
-                    nMarkers(j), fleparms, mrkRange, targetRange)
+                    nMarkers(j), fleparms, mrkRange, targetRange);
             end
         end
     end
