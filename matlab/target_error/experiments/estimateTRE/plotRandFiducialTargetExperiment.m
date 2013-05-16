@@ -1,4 +1,25 @@
-function plotRandFiducialTargetExperiment(testname, datetime, fleModel, figFontSize)
+function plotRandFiducialTargetExperiment(testname, datetime, fleModel, figFontSize, varargin)
+
+nToPlot = -1;
+verbose = 0;
+
+if( nargin > 4 )
+    nVarArgs = length(varargin);
+    i = 1;
+    while( i <= nVarArgs )
+        if( strcmp(varargin{i}, 'PlotDataSamples') )
+            i=i+1;
+            nToPlot = varargin{i};
+            if( ~isscalar(nToPlot) && ~isvector(nToPlot) )
+                error('Value for PlotDataSamples is invalid');
+            end
+        elseif( strcmp(varargin{i}, 'Verbose'))
+            verbose = 1;
+        else
+            error('Unknown paramter: %s', varargin{i});
+        end
+    end
+end
 
 cd(testname)
 cd(datetime)
@@ -33,7 +54,7 @@ title({titlestring, subtitlestring}, 'fontsize',figFontSize);
 axis([minRMS, maxRMS, minRMS, maxRMS]);
 figurefilename = sprintf('PredvMeas_%s', parm.name);
 %print('-depsc', '-tiff', '-r300', figurefilename);
-print('-dpng', '-r300', figurefilename);
+print('-dpng', '-r600', figurefilename);
 
 %copyfile('*.eps', 'E:\awiles\data\tretest\IEEE_Data\RandDesigns' );
 
@@ -41,8 +62,11 @@ print('-dpng', '-r300', figurefilename);
 nTotalCount = parm.nBodies*parm.nTrials*parm.nOrientations*parm.nPositions;
 %histbins = 0.01:0.01:1
 
-for i = 1:nTotalCount
-%for i = 2:nTotalCount
+if( isscalar(nToPlot) && nToPlot < 1 )
+    nToPlot = 1:nTotalCount;
+end
+
+for i = nToPlot
     filename = sprintf('data%06d.mat', i);
     fprintf('Plotting for %s ...\n', filename);
     load(filename);
@@ -73,7 +97,7 @@ for i = 1:nTotalCount
     title({titlestring, subtitlestring});
     figurefilename = sprintf('hist_%s_%06d', parm.name, i);
     %print('-depsc', '-tiff', '-r300', figurefilename);
-    print('-dpng', '-r300', figurefilename);
+    print('-dpng', '-r600', figurefilename);
 end
 
 cd ../..

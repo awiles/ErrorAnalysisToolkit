@@ -21,10 +21,21 @@ function [probe,rmsDiff] = runRandFiducialTargetNonHomogenousExperiment(nSamples
 %       targetRange - distance over which the target will appear.  The
 %                       origin is assumed to bisect this range.
 
+% initial variables - not dependent on variable args.
+nCount=0;
+nTotalCount = nBodies*nTrials*nOrientations*nPositions;
+passCount1 = 0;
+passCount2 = 0;
+passCount3 = 0;
+passCount4 = 0;
+rmsDiff = zeros(nTotalCount,4);
+rmsDiffAvgFLE = rmsDiff;
+
 % defaults for optional arguments.
 smtp_server = '';
 email_address = '';
 bEmail = 0;
+nToPlot = 1:nTrials*nOrientations*nPositions:nTotalCount;
 
 if( nargin > 9 )
     nVarArgs = length(varargin);
@@ -36,6 +47,12 @@ if( nargin > 9 )
         elseif (strcomp(varargin{i}, 'email'))
             i=i+1;
             email_address = varargin{i};
+        elseif( strcmp(varargin{i}, 'PlotDataSamples') )
+            i=i+1;
+            nToPlot = varargin{i};
+            if( ~isscalar(nToPlot) && ~isvector(nToPlot) )
+                error('Value for PlotDataSamples is invalid');
+            end
         elseif( strcmp(varargin{i}, 'Verbose'))
             verbose = 1;
         else
@@ -49,14 +66,7 @@ if( ~isempty(smtp_server) && ~isempty(email_address))
     bEmail = 1;
 end
 
-nCount=0;
-nTotalCount = nBodies*nTrials*nOrientations*nPositions;
-passCount1 = 0;
-passCount2 = 0;
-passCount3 = 0;
-passCount4 = 0;
-rmsDiff = zeros(nTotalCount,4);
-rmsDiffAvgFLE = rmsDiff;
+
 
 % set up the data directory to store the results.
 starttime = clock;
@@ -266,4 +276,4 @@ end
 
 fclose('all');
 cd ..\..
-plotRandFiducialTargetNonHomogemousExperiment(datadir,datetime,'Non-Homogenous', 18);
+plotRandFiducialTargetNonHomogemousExperiment(datadir,datetime,'Non-Homogenous', 18, 'PlotDataSamples', nToPlot);

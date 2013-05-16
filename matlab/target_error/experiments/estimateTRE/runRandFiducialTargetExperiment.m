@@ -21,10 +21,18 @@ function [probe,rmsDiff] = runRandFiducialTargetExperiment(nSamples, nBodies, nT
 %       targetRange - distance over which the target will appear.  The
 %                       origin is assumed to bisect this range.
 
+% initial variables - not dependent on variable args.
+nCount=0;
+nTotalCount = nBodies*nTrials*nOrientations*nPositions;
+passCount1 = 0;
+passCount2 = 0;
+rmsDiff = zeros(nTotalCount,3);
+
 % defaults for optional arguments.
 smtp_server = '';
 email_address = '';
 bEmail = 0;
+nToPlot = 1:nTrials*nOrientations*nPositions:nTotalCount;
 
 if( nargin > 8 )
     nVarArgs = length(varargin);
@@ -33,14 +41,21 @@ if( nargin > 8 )
         if( strcmp(varargin{i}, 'smtp') )
             i=i+1;
             smtp_server = varargin{i};
-        elseif (strcomp(varargin{i}, 'email'))
+        elseif( strcmp(varargin{i}, 'email'))
             i=i+1;
             email_address = varargin{i};
+        elseif( strcmp(varargin{i}, 'PlotDataSamples') )
+            i=i+1;
+            nToPlot = varargin{i};
+            if( ~isscalar(nToPlot) && ~isvector(nToPlot) )
+                error('Value for PlotDataSamples is invalid');
+            end
         elseif( strcmp(varargin{i}, 'Verbose'))
             verbose = 1;
         else
             error('Unknown paramter: %s', varargin{i});
         end
+        i=i+1;
     end
 end
 
@@ -48,12 +63,6 @@ if( ~isempty(smtp_server) && ~isempty(email_address))
     email_setup('smtp.me.com', 'awiles@me.com');
     bEmail = 1;
 end
-
-nCount=0;
-nTotalCount = nBodies*nTrials*nOrientations*nPositions;
-passCount1 = 0;
-passCount2 = 0;
-rmsDiff = zeros(nTotalCount,3);
 
 % is FLE isotropic?
 if( isIsotropic(Sigma) )
@@ -203,4 +212,4 @@ end
 
 fclose('all');
 cd ../..
-plotRandFiducialTargetExperiment(datadir, datetime,'Homogenous', 18);
+plotRandFiducialTargetExperiment(datadir, datetime,'Homogenous', 18, 'PlotDataSamples', nToPlot);
