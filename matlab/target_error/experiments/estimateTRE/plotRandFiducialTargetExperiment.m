@@ -18,6 +18,7 @@ if( nargin > 4 )
         else
             error('Unknown paramter: %s', varargin{i});
         end
+        i=i+1;
     end
 end
 
