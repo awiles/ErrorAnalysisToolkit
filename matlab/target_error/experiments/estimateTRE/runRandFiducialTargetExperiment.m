@@ -21,10 +21,18 @@ function [probe,rmsDiff] = runRandFiducialTargetExperiment(nSamples, nBodies, nT
 %       targetRange - distance over which the target will appear.  The
 %                       origin is assumed to bisect this range.
 
+% initial variables - not dependent on variable args.
+nCount=0;
+nTotalCount = nBodies*nTrials*nOrientations*nPositions;
+passCount1 = 0;
+passCount2 = 0;
+rmsDiff = zeros(nTotalCount,3);
+
 % defaults for optional arguments.
 smtp_server = '';
 email_address = '';
 bEmail = 0;
+nToPlot = 1:nTrials*nOrientations*nPositions:nTotalCount;
 
 if( nargin > 8 )
     nVarArgs = length(varargin);
@@ -33,32 +41,48 @@ if( nargin > 8 )
         if( strcmp(varargin{i}, 'smtp') )
             i=i+1;
             smtp_server = varargin{i};
-        elseif (strcomp(varargin{i}, 'email'))
+        elseif( strcmp(varargin{i}, 'email'))
             i=i+1;
             email_address = varargin{i};
+        elseif( strcmp(varargin{i}, 'PlotDataSamples') )
+            i=i+1;
+            nToPlot = varargin{i};
+            if( ~isscalar(nToPlot) && ~isvector(nToPlot) )
+                error('Value for PlotDataSamples is invalid');
+            end
         elseif( strcmp(varargin{i}, 'Verbose'))
             verbose = 1;
         else
             error('Unknown paramter: %s', varargin{i});
         end
+        i=i+1;
     end
 end
 
 if( ~isempty(smtp_server) && ~isempty(email_address))
     email_setup('smtp.me.com', 'awiles@me.com');
-    bEMail = 1;
+    bEmail = 1;
 end
 
-nCount=0;
-nTotalCount = nBodies*nTrials*nOrientations*nPositions;
-passCount1 = 0;
-passCount2 = 0;
-rmsDiff = zeros(nTotalCount,3);
+% is FLE isotropic?
+if( isIsotropic(Sigma) )
+    fletype = 'isotropic';
+else
+    fletype = 'anisotropic';
+end
 
 % set up the data directory to store the results.
 starttime = clock;
+datadir = sprintf('%02dMarkers-%03dBodies-%03dTrials-%03dOrientations-%03dPositions-%07dSamples-%sFLE',...
+    nMarkers, nBodies, nTrials, nOrientations, nPositions, nSamples, fletype);
+if( ~isdir(datadir) )
+    mkdir(datadir);
+end
+cd(datadir);
 datetime   = sprintf('%4d%02d%02d-%02d%02d', starttime(1:5));
-mkdir(datetime);
+if( ~isdir(datetime) )
+    mkdir(datetime);
+end
 cd(datetime);
 
 % write the experiment parameters to the readme.txt file.
@@ -174,7 +198,7 @@ fprintf(frm, 'RMS Percent Difference (Mean, Std, Max, Min): %3.2f, %3.2f, %3.2f,
 save('parm', 'parm');
 
 % the file to screen and send an email that it is complete.
-type readme.txt;
+% type readme.txt;
 endtime = clock;
 msg = sprintf(['TRE Simulation Complete.\n    '...
     'Started:  %d-%02d-%02d %02d:%02d\n    '...
@@ -182,10 +206,10 @@ msg = sprintf(['TRE Simulation Complete.\n    '...
     'Test ID: %s\n\n    See attachment for details.'],...
     starttime(1:5), endtime(1:5), datetime);
 
-if( bEmail)
+if( bEmail )
     sendmail(email_address, 'TRE Simulation Complete', msg, {'readme.txt','data.csv'});
 end
 
 fclose('all');
-cd ..
-plotRandFiducialTargetExperiment(datetime,'Homogenous', 18);
+cd ../..
+plotRandFiducialTargetExperiment(datadir, datetime,'Homogenous', 18, 'PlotDataSamples', nToPlot);

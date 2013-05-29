@@ -1,5 +1,5 @@
 function [probe,rmsDiff] = runRandFiducialTargetNonHomogenousExperiment(nSamples,...
-    nBodies, nTrials, nOrientations, nPositions,nMarkers, fleparms, mrkRange, targetRange)
+    nBodies, nTrials, nOrientations, nPositions,nMarkers, fleparms, mrkRange, targetRange, varargin)
 % [probe,rmsDiff] = runRandFiducialTargetNonHomogenousExperiment(nSamples, nTrials,...
 %                       nOrientations, nPositions, nMarkers, Sigma, mrkRange, targetRange)
 %
@@ -21,8 +21,7 @@ function [probe,rmsDiff] = runRandFiducialTargetNonHomogenousExperiment(nSamples
 %       targetRange - distance over which the target will appear.  The
 %                       origin is assumed to bisect this range.
 
-email_setup;
-
+% initial variables - not dependent on variable args.
 nCount=0;
 nTotalCount = nBodies*nTrials*nOrientations*nPositions;
 passCount1 = 0;
@@ -32,14 +31,56 @@ passCount4 = 0;
 rmsDiff = zeros(nTotalCount,4);
 rmsDiffAvgFLE = rmsDiff;
 
+% defaults for optional arguments.
+smtp_server = '';
+email_address = '';
+bEmail = 0;
+nToPlot = 1:nTrials*nOrientations*nPositions:nTotalCount;
+
+if( nargin > 9 )
+    nVarArgs = length(varargin);
+    i = 1;
+    while( i <= nVarArgs )
+        if( strcmp(varargin{i}, 'smtp') )
+            i=i+1;
+            smtp_server = varargin{i};
+        elseif (strcomp(varargin{i}, 'email'))
+            i=i+1;
+            email_address = varargin{i};
+        elseif( strcmp(varargin{i}, 'PlotDataSamples') )
+            i=i+1;
+            nToPlot = varargin{i};
+            if( ~isscalar(nToPlot) && ~isvector(nToPlot) )
+                error('Value for PlotDataSamples is invalid');
+            end
+        elseif( strcmp(varargin{i}, 'Verbose'))
+            verbose = 1;
+        else
+            error('Unknown paramter: %s', varargin{i});
+        end
+        i=i+1;
+    end
+end
+
+if( ~isempty(smtp_server) && ~isempty(email_address))
+    email_setup('smtp.me.com', 'awiles@me.com');
+    bEmail = 1;
+end
+
+
+
 % set up the data directory to store the results.
 starttime = clock;
 datadir = sprintf('%02dMarkers-%03dBodies-%03dOrientations-%03dPositions-%02dFLEModel',...
     nMarkers, nBodies, nOrientations, nPositions, fleparms.modeltype);
-mkdir(datadir);
+if( ~isdir(datadir) )
+    mkdir(datadir);
+end
 cd(datadir);
 datetime   = sprintf('%4d%02d%02d-%02d%02d', starttime(1:5));
-mkdir(datetime);
+if( ~isdir(datetime) )
+    mkdir(datetime);
+end
 cd(datetime);
 
 % write the experiment parameters to the readme.txt file.
@@ -118,13 +159,13 @@ for i=1:nBodies
                 %use the non-homogenous model.
                 %fprintf('Get NH TRE...');
                 [probe.Actual.stats.RMS, probe.Actual.stats.Sigma, probe.Actual.stats.SigmaPA]...
-                    = calcTRE(sigmaNH, [probe.Actual.mrk; probe.Actual.tip], 0);
+                    = calcTRE(sigmaNH, [probe.Actual.mrk; probe.Actual.tip]);
                 %[probe.Actual.mrk; probe.Actual.tip]
                 %fprintf('NH   RMS: %f\n', probe.Actual.stats.RMS);   
                 %average the FLE matrices and use the homogenous model.
                 %fprintf('Get Avg TRE...\n');
                 [probe.AvgFLE.stats.RMS, probe.AvgFLE.stats.Sigma, probe.AvgFLE.stats.SigmaPA]...
-                    = calcTRE(sigmaAvg, [probe.Actual.mrk; probe.Actual.tip], 0);
+                    = calcTRE(sigmaAvg, [probe.Actual.mrk; probe.Actual.tip]);
                 %fprintf('Avg  RMS: %f\n', probe.AvgFLE.stats.RMS);
             
                 %estimate using Fitzpatrick's.
@@ -220,12 +261,8 @@ fprintf(frm, 'RMS Percent Difference (Mean, Std, Max, Min): %3.2f, %3.2f, %3.2f,
 %save the parameters to be recalled later during postprocessing.
 save('parm', 'parm');
 
-
-fclose('all');
-plotRandFiducialTargetNonHomogemousExperiment(datadir,datetime,'Non-Homogenous', 18);
-
 % the file to screen and send an email that it is complete.
-type readme.txt;
+%type readme.txt;
 endtime = clock;
 msg = sprintf(['TRE Simulation Complete.\n    '...
     'Started:  %d-%02d-%02d %02d:%02d\n    '...
@@ -233,6 +270,11 @@ msg = sprintf(['TRE Simulation Complete.\n    '...
     'Test ID: %s\n\n    See attachment for details.'],...
     starttime(1:5), endtime(1:5), datetime);
 
-sendmail('awiles@imaging.robarts.ca', 'TRE Simulation Complete', msg,...
-    {'readme.txt','data.csv', ['PredvMeas_' datetime '.png'], ['hist_' datetime '_000001.png']});
+if( bEmail )
+    sendmail(email_address, 'TRE Simulation Complete', msg,...
+        {'readme.txt','data.csv'} );
+end
+
+fclose('all');
 cd ..\..
+plotRandFiducialTargetNonHomogemousExperiment(datadir,datetime,'Non-Homogenous', 18, 'PlotDataSamples', nToPlot);

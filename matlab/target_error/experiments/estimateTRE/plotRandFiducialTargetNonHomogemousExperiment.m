@@ -1,5 +1,31 @@
 function plotRandFiducialTargetNonHomogemousExperiment(testname, datetime, fleModel, figFontSize)
 
+% defaults for optional arguments.
+nToPlot = -1;
+verbose = 0;
+
+if( nargin > 4 )
+    nVarArgs = length(varargin);
+    i = 1;
+    while( i <= nVarArgs )
+        if( strcmp(varargin{i}, 'PlotDataSamples') )
+            i=i+1;
+            nToPlot = varargin{i};
+            if( ~isscalar(nToPlot) && ~isvector(nToPlot) )
+                error('Value for PlotDataSamples is invalid');
+            end
+        elseif( strcmp(varargin{i}, 'Verbose'))
+            verbose = 1;
+        else
+            error('Unknown paramter: %s', varargin{i});
+        end
+        i=i+1;
+    end
+end
+
+cd(testname)
+cd(datetime)
+
 data = csvread('data.csv');
 id = 1;
 covonly = 2;
@@ -45,7 +71,11 @@ copyfile('PredvMeas*.png', '..\' );
 nTotalCount = parm.nBodies*parm.nTrials*parm.nOrientations*parm.nPositions;
 %histbins = 0.01:0.01:1
 
-for i = 1:5 % only plot the histograms for the first 5 tests.
+if( isscalar(nToPlot) && nToPlot < 1 )
+    nToPlot = 1:nTotalCount;
+end
+
+for i = nToPlot
     filename = sprintf('data%06d.mat', i);
     fprintf('Plotting for %s ...\n', filename);
     load(filename);
@@ -79,3 +109,5 @@ for i = 1:5 % only plot the histograms for the first 5 tests.
     %print('-depsc', '-tiff', '-r300', figurefilename);
     print('-dpng', '-r600', figurefilename);
 end
+
+cd ../..
