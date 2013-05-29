@@ -66,6 +66,6 @@ if( bPlot )
     hold on;
     plot3(measPos(:,1), measPos(:,2), measPos(:,3), '.r');
     hold off;
-    legend({Reference}, {Measured});
+    legend({'Reference','Measured'});
 end
 end
