@@ -1,14 +1,37 @@
-function errPos = get3DErrorStats(refPos, measPos, bFit)
+function errPos = get3DErrorStats(refPos, measPos, varargin)
+%get3DErrorStats Compute the vector stats for a point cloud.
+%   refPos  - N x 3 matrix of reference positions.
+%   measPos - N x 3 matrix of the measured positions.
+
+% default values for optional variables.
+bFit = 0;
+bPlot = 0;
+verbose = 0;
+
+if( nargin > 2 )
+    nVarArgs = length(varargin);
+    i = 1;
+    while( i <= nVarArgs )
+        if( strcmp(varargin{i}, 'BestFit'))
+            bFit = 1;
+        elseif( strcmp(varargin{i}, 'Plot'))
+            bPlot = 1;
+        elseif( strcmp(varargin{i}, 'Verbose'))
+            verbose = 1;
+        else
+            warning('Unknown parameter: %s -- Ignoring it.', varargin{i})
+        end
+        i=i+1;
+    end
+end
 
 if( size(refPos) ~= size(measPos) )
-    errString = sprintf( 'The number of reference positions is different than the number of measured positions.\n'); 
+    errString = sprintf( 'The number of reference positions is different than the number of measured positions.\n');
     error(errString );
 end
 
-if( nargin > 2)
-    if( bFit )
-        [xfrm, refPos0, rmsError] = TransformRigidBody(refPos, measPos);
-    end
+if( bFit )
+    [xfrm, refPos0, rmsError] = TransformRigidBody(refPos, measPos);
 else
     refPos0 = refPos;
 end
@@ -29,16 +52,20 @@ fprintf('x\t%3.2f\t%3.2f\t%3.2f\t%3.2f\n', rmsErr(1), meanErr(1), stdErr(1), max
 fprintf('y\t%3.2f\t%3.2f\t%3.2f\t%3.2f\n', rmsErr(2), meanErr(2), stdErr(2), maxErr(2) );
 fprintf('z\t%3.2f\t%3.2f\t%3.2f\t%3.2f\n', rmsErr(3), meanErr(3), stdErr(3), maxErr(3) );
 fprintf('3D\t%3.2f\t%3.2f\t%3.2f\t%3.2f\n', rmsErr(4), meanErr(4), stdErr(4), maxErr(4) );
+fprintf('\nCovariance Matrix:\n');
+fprintf('% 3.2f\t% 3.2f\t% 3.2f\n', covErr);
 
-if( nargin > 2)
-    if( bFit )
-        fprintf('The data was registered for a best fit set of statistics.\n');
-        fprintf('    Xfrm: %3.6f, %3.6f, %3.6f, %3.6f, %3.2f, %3.2f, %3.2f\n', ...
-            xfrm.rot, xfrm.pos);
-    end
+if( bFit )
+    fprintf('The data was registered for a best fit set of statistics.\n');
+    fprintf('    Xfrm: %3.6f, %3.6f, %3.6f, %3.6f, %3.2f, %3.2f, %3.2f\n', ...
+        xfrm.rot, xfrm.pos);
 end
 
-plot3(refPos0(:,1), refPos0(:,2), refPos0(:,3), '.k');
-hold on;
-plot3(measPos(:,1), measPos(:,2), measPos(:,3), '.r');
-hold off;
+if( bPlot )
+    plot3(refPos0(:,1), refPos0(:,2), refPos0(:,3), '.k');
+    hold on;
+    plot3(measPos(:,1), measPos(:,2), measPos(:,3), '.r');
+    hold off;
+    legend({Reference}, {Measured});
+end
+end
