@@ -47,11 +47,11 @@ rmsErr  = sqrt(mean([errPos errDist].^2));
 maxErr  = max([errPos errDist]);
 covErr = cov(errPos);
 
-fprintf('\tRMS\t\tMean\tSt.Dev\tMax\t\n');
-fprintf('x\t%3.2f\t%3.2f\t%3.2f\t%3.2f\n', rmsErr(1), meanErr(1), stdErr(1), maxErr(1) );
-fprintf('y\t%3.2f\t%3.2f\t%3.2f\t%3.2f\n', rmsErr(2), meanErr(2), stdErr(2), maxErr(2) );
-fprintf('z\t%3.2f\t%3.2f\t%3.2f\t%3.2f\n', rmsErr(3), meanErr(3), stdErr(3), maxErr(3) );
-fprintf('3D\t%3.2f\t%3.2f\t%3.2f\t%3.2f\n', rmsErr(4), meanErr(4), stdErr(4), maxErr(4) );
+fprintf('\tRMS\t\tMean\tSt.Dev\tMax\t\t2.5%%\t97.5%%\t95.0%%\n');
+fprintf('x\t%3.2f\t%3.2f\t%3.2f\t%3.2f\t%3.2f\t%3.2f\tN/A\n', rmsErr(1), meanErr(1), stdErr(1), maxErr(1), getPercentile(errPos(:,1),0.025), getPercentile(errPos(:,1),0.975) );
+fprintf('y\t%3.2f\t%3.2f\t%3.2f\t%3.2f\t%3.2f\t%3.2f\tN/A\n', rmsErr(2), meanErr(2), stdErr(2), maxErr(2), getPercentile(errPos(:,2),0.025), getPercentile(errPos(:,2),0.975) );
+fprintf('z\t%3.2f\t%3.2f\t%3.2f\t%3.2f\t%3.2f\t%3.2f\tN/A\n', rmsErr(3), meanErr(3), stdErr(3), maxErr(3), getPercentile(errPos(:,3),0.025), getPercentile(errPos(:,3),0.975) );
+fprintf('3D\t%3.2f\t%3.2f\t%3.2f\t%3.2f\tN/A   \tN/A   \t%3.2f\n', rmsErr(4), meanErr(4), stdErr(4), maxErr(4), getPercentile(errDist, 0.95) );
 fprintf('\nCovariance Matrix:\n');
 fprintf('% 3.2f\t% 3.2f\t% 3.2f\n', covErr);
 
